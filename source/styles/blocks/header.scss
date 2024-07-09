@@ -4,7 +4,7 @@
   align-items: center;
   flex-wrap: wrap;
   min-height: 60px;
-  background-color: grey;
+  xxbackground-color: grey;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -21,7 +21,7 @@
   .header-logo {
     display: flex;
     align-items: center;
-    background-color: green;
+    xxbackground-color: green;
     height: 60px;
     width: 20%;
 
@@ -37,19 +37,47 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: red;
+    xxbackground-color: red;
     width: 100%;
-    height: 60px;
+    xxheight: 60px;
 
-    text-decoration:none;
+
     order: 3;
+
+    .header-menu__item:first-child{
+      border-top: solid 1px #F0EBFF;
+    }
+
+    .header-menu__item{
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      xxheight:157px;
+      width: 100%;
+      text-decoration:none;
+      text-transform: uppercase;
+      font-family: "Montserrat", "Arial";
+      font-weight: 500;
+      font-size: 12px;
+      line-height:16px;
+      color: #333333;
+      border-top: solid 1px #F0EBFF;
+      xxborder-bottom: solid 1px #F0EBFF;
+      padding: 20px;
+    }
+
+    .header-menu__item:last-child{
+      border-bottom: solid 1px #F0EBFF;
+    }
   }
 
   .header-user-section {
+
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background-color: darkgoldenrod;
+    xxbackground-color: darkgoldenrod;
     width: 80%;
     height: 60px;
     gap:8px;
@@ -57,7 +85,8 @@
     .header__login-icon {
       width: 60px;
       height: 60px;
-      background-image: url("/icons/login-icon.svg");
+      xxbackground-image: url("/icons/login-icon.svg");
+      background-image: url("/icons/stack.svg#login-icon");
       background-repeat: no-repeat;
       background-size: 16px;
       background-position: center;
@@ -66,7 +95,8 @@
     .header__basket-icon{
       width: 60px;
       height: 60px;
-      background-image: url("/icons/basket-icon.svg");
+      xxbackground-image: url("/icons/basket-icon.svg");
+      background-image: url("/icons/stack.svg#basket-icon");
       background-repeat: no-repeat;
       background-size: 16px;
       background-position: center;
@@ -75,7 +105,8 @@
     .header__menu-icon{
       width: 60px;
       height: 60px;
-      background-image: url("/icons/menu-icon.svg");
+      xxbackground-image: url("/icons/menu-icon.svg");
+      background-image: url("/icons/stack.svg#menu-icon");
       background-repeat: no-repeat;
       background-size: 16px;
       background-position: center;
