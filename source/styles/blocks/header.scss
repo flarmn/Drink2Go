@@ -106,10 +106,12 @@
       width: 60px;
       height: 60px;
       xxbackground-image: url("/icons/menu-icon.svg");
+      background:white;
       background-image: url("/icons/stack.svg#menu-icon");
       background-repeat: no-repeat;
       background-size: 16px;
       background-position: center;
+      border-style: none;
     }
   }
 
