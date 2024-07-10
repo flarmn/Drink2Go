@@ -15,7 +15,7 @@
         <div class = "header-logo">
           <a href="https://htmlacademy.ru/" class="header__logo-link" title="На главную Drink2Go"></a>
         </div>
-        <nav class = "header-menu">
+        <nav class = "header-menu js-header-menu ">
           <a href="#" class="header-menu__item" title="На главную">Главная</a>
           <a href="#" class="header-menu__item" title="Перейти в каталог">Каталог</a>
           <a href="#" class="header-menu__item" title="В раздел доставка">Доставка</a>
@@ -24,7 +24,7 @@
         <div class = "header-user-section">
           <a href="#" class="header__login-icon" title="Авторизация на сайте"></a>
           <a href="#" class="header__basket-icon" title="Корзина"></a>
-          <button class="header__menu-icon"></button>
+          <button class="header__menu-icon js-header__menu-icon"></button>
         </div>
 
     </header>
@@ -33,41 +33,53 @@
       <h1 hidden>Страница для старта - test</h1>
 
       <section class = "slider">
-        <div class = "slider__frame">
-          <img src = "/images/slider/slider_flat_white_tablet@1x.png" title = "Decaf Flat White" class = "slider__image" width = "280" height = "280">
-          <label class = 'slider__badge'>Новинка!</label>
-          <div class = "slider__arrow-controls">
-            <div class = "arrow-controls__left-arrow"></div>
-            <div class = "arrow-controls__right-arrow"></div>
-          </div>
-          <h2 class = "slider__heading">Декаф Флэт Уайт</h2>
-          <p class = "slider__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
-          <div class = "slider__pricing">
-            <div class = "slider__pricing-screen">
-              <span class = "slider__old-price">295₽</span>
-              <span class = "slider__current-price">225₽</span>
-            </div>
-            <button class = "slider__orderButton">Заказать</button>
-          </div>
-        </div>
+        <div class = "arrow-controls__left-arrow js-left-arrow"></div>
+        <div class = "slider__frames-strip js-frames-strip">
 
-        <div class = "slider__frame">
-          <img src = "/images/slider/slider_flat_white_tablet@1x.png" title = "Decaf Flat White" class = "slider__image" width = "280" height = "280">
-          <label class = 'slider__badge'>Новинка!</label>
-          <div class = "slider__arrow-controls">
-            <div class = "arrow-controls__left-arrow"></div>
-            <div class = "arrow-controls__right-arrow"></div>
-          </div>
-          <h2 class = "slider__heading">Декаф Флэт Уайт</h2>
-          <p class = "slider__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
-          <div class = "slider__pricing">
-            <div class = "slider__pricing-screen">
-              <span class = "slider__old-price">295₽</span>
-              <span class = "slider__current-price">225₽</span>
+          <div class = "slider__frame ">
+            <img src = "/images/slider/slider_flat_white_tablet@1x.png" title = "Decaf Flat White" class = "slider__image" width = "280" height = "280">
+            <label class = 'slider__badge'>Новинка!</label>
+            <h2 class = "slider__heading">Декаф Флэт Уайт</h2>
+            <p class = "slider__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+            <div class = "slider__pricing">
+              <div class = "slider__pricing-screen">
+                <span class = "slider__old-price">295₽</span>
+                <span class = "slider__current-price">225₽</span>
+              </div>
+              <button class = "slider__orderButton">Заказать</button>
             </div>
-            <button class = "slider__orderButton">Заказать</button>
           </div>
+
+          <div class = "slider__frame">
+            <img src = "/images/slider/lavander_mobile@1x.png" title = "Decaf Flat White" class = "slider__image" width = "280" height = "280">
+            <label class = 'slider__badge'>Новинка!</label>
+            <h2 class = "slider__heading">Лавандовый Латте</h2>
+            <p class = "slider__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+            <div class = "slider__pricing">
+              <div class = "slider__pricing-screen">
+                <span class = "slider__old-price">285₽</span>
+                <span class = "slider__current-price">265₽</span>
+              </div>
+              <button class = "slider__orderButton">Заказать</button>
+            </div>
+          </div>
+
+          <div class = "slider__frame">
+            <img src = "/images/slider/triple_mobile@1x.png" title = "Decaf Flat White" class = "slider__image" width = "280" height = "280">
+            <label class = 'slider__badge'>Новинка!</label>
+            <h2 class = "slider__heading">Тройной Эспрессо</h2>
+            <p class = "slider__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+            <div class = "slider__pricing">
+              <div class = "slider__pricing-screen">
+                <span class = "slider__old-price">395₽</span>
+                <span class = "slider__current-price">375₽</span>
+              </div>
+              <button class = "slider__orderButton">Заказать</button>
+            </div>
+          </div>
+
         </div>
+        <div class = "arrow-controls__right-arrow js-right-arrow"></div>
         </section>
 
     </main>

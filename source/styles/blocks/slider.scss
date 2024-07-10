@@ -3,25 +3,51 @@
 
   .slider {
     display: flex;
-    xxoverflow-x: hidden;
-    align-items: center;
-    xxgap:10px;
+    background-color: #F3EBE1;
+    width: 320px;
+    height: 656px;
+    margin:auto;
+
+    .arrow-controls__left-arrow {
+      xxposition: absolute;
+      height: 656px;
+      width: 20px;
+      background-image: url("/icons/stack.svg#arrow-left");
+      background-position: 0px -30px;
+
+    }
+
+    .slider__frames-strip{
+      display: flex;
+      align-items: center;
+      width:300px;
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    .arrow-controls__right-arrow {
+      height: 656px;
+      width: 20px;
+      background-image: url("/icons/stack.svg#arrow-left");
+      background-position: 0px -30px;
+      transform: scaleX(-1);
+    }
   }
 
   .slider__frame {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 320px;
+    min-width: 280px;
+    width:280px;
     height: 656px;
-    background-color: #F3EBE1;
+    overflow-x: scroll;
 
     .slider__image {
-      xxmargin: auto;
+      margin-top:20px;
     }
 
     .slider__badge {
-      //styleName: Badge;
       font-family: "Montserrat Bold";
       font-size: 12px;
       font-weight: 700;
@@ -55,7 +81,7 @@
 
 
   }
-
+/*
   .slider__arrow-controls {
     display: flex;
     justify-content: space-between;
@@ -77,6 +103,7 @@
       transform: scaleX(-1);
     }
   }
+*/
 
   .slider__pricing {
     display: flex;
