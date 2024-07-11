@@ -1,0 +1,73 @@
+.advantages {
+  display: flex;
+  flex-direction: column;
+  xxbackground-color: red;
+
+  .advatages__bage {
+    font-family: "Montserrat Bold";
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #7859CF;
+    margin-top: 50px;
+  }
+
+  .advatages__heading {
+    //styleName: Heading3 Mobile;
+    font-family: "Montserrat Bold";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  .advatages-list {
+    display: flex;
+    flex-direction: column;
+    xxbackground-color: green;
+    xxjustify-content: center;
+    align-items: center;
+  }
+}
+
+.advatages-list__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  xxbackground-color: orange;
+  width: 280px;
+  margin-bottom: 32px;
+
+  .advatages-card__image {
+    xxbackground-color: silver;
+  }
+
+  .advatages-card__heading {
+    //styleName: Heading3 Mobile;
+    font-family: "Montserrat Bold";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 14px;
+    color: #333333;
+  }
+
+  .advatages-card__description {
+    //styleName: Regular Text Mobile;
+    font-family: "Montserrat Regular";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    color: #333333;
+    margin:0;
+    padding:0;
+    margin-top:5px;
+
+  }
+}
