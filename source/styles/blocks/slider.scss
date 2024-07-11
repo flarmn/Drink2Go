@@ -47,7 +47,8 @@
       margin-top:20px;
     }
 
-    .slider__badge {
+
+    .badge {
       font-family: "Montserrat Bold";
       font-size: 12px;
       font-weight: 700;
@@ -55,6 +56,7 @@
       letter-spacing: 0.04em;
       text-transform: uppercase;
       color: #7859CF;
+      margin-top:unset;
     }
 
     .slider__heading {

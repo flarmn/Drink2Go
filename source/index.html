@@ -1,127 +1,266 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>Название проекта</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="preload" href="#" type="font/woff2" as="font">
-    <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/index.js" defer></script>
-  </head>
-  <body class="page__body">
 
-    <header class = "header">
+<head>
+  <meta charset="UTF-8">
+  <title>Название проекта</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preload" href="#" type="font/woff2" as="font">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/index.js" defer></script>
+</head>
 
-        <div class = "header-logo">
-          <a href="https://htmlacademy.ru/" class="header__logo-link" title="На главную Drink2Go"></a>
-        </div>
-        <nav class = "header-menu js-header-menu ">
-          <a href="#" class="header-menu__item" title="На главную">Главная</a>
-          <a href="#" class="header-menu__item" title="Перейти в каталог">Каталог</a>
-          <a href="#" class="header-menu__item" title="В раздел доставка">Доставка</a>
-          <a href="#" class="header-menu__item" title="Информация о нас">О Нас</a>
-        </nav>
-        <div class = "header-user-section">
-          <a href="#" class="header__login-icon" title="Авторизация на сайте"></a>
-          <a href="#" class="header__basket-icon" title="Корзина"></a>
-          <button class="header__menu-icon js-header__menu-icon"></button>
-        </div>
+<body class="page__body">
 
-    </header>
+  <header class="header">
 
-    <main>
-      <h1 hidden>Страница для старта - test</h1>
+    <div class="header-logo">
+      <a href="https://htmlacademy.ru/" class="header__logo-link" title="На главную Drink2Go"></a>
+    </div>
+    <nav class="header-menu js-header-menu ">
+      <a href="#" class="header-menu__item" title="На главную">Главная</a>
+      <a href="#" class="header-menu__item" title="Перейти в каталог">Каталог</a>
+      <a href="#" class="header-menu__item" title="В раздел доставка">Доставка</a>
+      <a href="#" class="header-menu__item" title="Информация о нас">О Нас</a>
+    </nav>
+    <div class="header-user-section">
+      <a href="#" class="header__login-icon" title="Авторизация на сайте"></a>
+      <a href="#" class="header__basket-icon" title="Корзина"></a>
+      <button class="header__menu-icon js-header__menu-icon"></button>
+    </div>
 
-        <section class = "slider">
-          <div class = "arrow-controls__left-arrow js-left-arrow"></div>
-          <div class = "slider__frames-strip js-frames-strip">
+  </header>
 
-            <div class = "slider__frame ">
-              <img src = "/images/slider/slider_flat_white_tablet@1x.png" title = "Decaf Flat White" class = "slider__image" width = "280" height = "280">
-              <label class = 'slider__badge'>Новинка!</label>
-              <h2 class = "slider__heading">Декаф Флэт Уайт</h2>
-              <p class = "slider__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
-              <div class = "slider__pricing">
-                <div class = "slider__pricing-screen">
-                  <span class = "slider__old-price">295₽</span>
-                  <span class = "slider__current-price">225₽</span>
-                </div>
-                <button class = "slider__orderButton">Заказать</button>
-              </div>
+  <main>
+    <h1 hidden>Страница для старта - test</h1>
+
+    <section class="slider">
+      <div class="arrow-controls__left-arrow js-left-arrow"></div>
+      <div class="slider__frames-strip js-frames-strip">
+
+        <div class="slider__frame ">
+          <img src="/images/slider/slider_flat_white_tablet@1x.png" title="Decaf Flat White" class="slider__image"
+            width="280" height="280">
+          <label class='badge'>Новинка!</label>
+          <h2 class="slider__heading">Декаф Флэт Уайт</h2>
+          <p class="slider__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком —
+            то, что нужно для расслабления после тяжёлого рабочего дня</p>
+          <div class="slider__pricing">
+            <div class="slider__pricing-screen">
+              <span class="slider__old-price">295₽</span>
+              <span class="slider__current-price">225₽</span>
             </div>
-
-            <div class = "slider__frame">
-              <img src = "/images/slider/lavander_mobile@1x.png" title = "Decaf Flat White" class = "slider__image" width = "280" height = "280">
-              <label class = 'slider__badge'>Новинка!</label>
-              <h2 class = "slider__heading">Лавандовый Латте</h2>
-              <p class = "slider__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
-              <div class = "slider__pricing">
-                <div class = "slider__pricing-screen">
-                  <span class = "slider__old-price">285₽</span>
-                  <span class = "slider__current-price">265₽</span>
-                </div>
-                <button class = "slider__orderButton">Заказать</button>
-              </div>
-            </div>
-
-            <div class = "slider__frame">
-              <img src = "/images/slider/triple_mobile@1x.png" title = "Decaf Flat White" class = "slider__image" width = "280" height = "280">
-              <label class = 'slider__badge'>Новинка!</label>
-              <h2 class = "slider__heading">Тройной Эспрессо</h2>
-              <p class = "slider__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
-              <div class = "slider__pricing">
-                <div class = "slider__pricing-screen">
-                  <span class = "slider__old-price">395₽</span>
-                  <span class = "slider__current-price">375₽</span>
-                </div>
-                <button class = "slider__orderButton">Заказать</button>
-              </div>
-            </div>
-
+            <button class="slider__orderButton">Заказать</button>
           </div>
-          <div class = "arrow-controls__right-arrow js-right-arrow"></div>
-        </section>
+        </div>
 
-         <section class = "advantages">
-          <label class = "advatages__bage">Преимущества</label>
-          <h2 class = "advatages__heading">Главные причины выбрать Drink2Go</h2>
-
-          <div class = "advatages-list">
-            <div class = "advatages-list__card">
-              <img src = "/images/vector/feature-speed-icon.svg" alt = "Скорость (иконка)" class = "advatages-card__image" width="52" height="56">
-              <h3 class = "advatages-card__heading">Скорость</h3>
-              <p class = "advatages-card__description">Готовый напиток всегда под рукой — просто открой банку</p>
+        <div class="slider__frame">
+          <img src="/images/slider/lavander_mobile@1x.png" title="Decaf Flat White" class="slider__image" width="280"
+            height="280">
+          <label class='badge'>Новинка!</label>
+          <h2 class="slider__heading">Лавандовый Латте</h2>
+          <p class="slider__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и
+            лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+          <div class="slider__pricing">
+            <div class="slider__pricing-screen">
+              <span class="slider__old-price">285₽</span>
+              <span class="slider__current-price">265₽</span>
             </div>
-
-            <div class = "advatages-list__card">
-              <img src = "/images/vector/feature-usefullnes-icon.svg" alt = "Удобство (иконка)" class = "advatages-card__image" width="52" height="56">
-              <h3 class = "advatages-card__heading"> Удобство</h3>
-              <p class = "advatages-card__description">Легко помещается и в карман,
-                и в маленькую сумочку</p>
-            </div>
-
-            <div class = "advatages-list__card">
-              <img src = "/images/vector/feature-energy-icon.svg" alt = "Бодрость (иконка)" class = "advatages-card__image" width="52" height="56">
-              <h3 class = "advatages-card__heading"> Бодрость</h3>
-              <p class = "advatages-card__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
-            </div>
-
-            <div class = "advatages-list__card">
-              <img src = "/images/vector/feature-ecology-icon.svg" alt = "Экологичность (иконка)" class = "advatages-card__image" width="52" height="56">
-              <h3 class = "advatages-card__heading"> Экологичность</h3>
-              <p class = "advatages-card__description">Вся упаковка сделана
-                из перерабатываемых материалов</p>
-            </div>
-
+            <button class="slider__orderButton">Заказать</button>
           </div>
+        </div>
+
+        <div class="slider__frame">
+          <img src="/images/slider/triple_mobile@1x.png" title="Decaf Flat White" class="slider__image" width="280"
+            height="280">
+          <label class='badge'>Новинка!</label>
+          <h2 class="slider__heading">Тройной Эспрессо</h2>
+          <p class="slider__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из
+            Колумбии покажет вам, что такое настоящая бодрость</p>
+          <div class="slider__pricing">
+            <div class="slider__pricing-screen">
+              <span class="slider__old-price">395₽</span>
+              <span class="slider__current-price">375₽</span>
+            </div>
+            <button class="slider__orderButton">Заказать</button>
+          </div>
+        </div>
+
+      </div>
+      <div class="arrow-controls__right-arrow js-right-arrow"></div>
+    </section>
+
+    <section class="advantages">
+      <label class="badge">Преимущества</label>
+      <h2 class="advatages__heading">Главные причины выбрать Drink2Go</h2>
+
+      <div class="advatages-list">
+        <div class="advatages-list__card">
+          <img src="/images/vector/feature-speed-icon.svg" alt="Скорость (иконка)" class="advatages-card__image"
+            width="52" height="56">
+          <h3 class="advatages-card__heading">Скорость</h3>
+          <p class="advatages-card__description">Готовый напиток всегда под рукой — просто открой банку</p>
+        </div>
+
+        <div class="advatages-list__card">
+          <img src="/images/vector/feature-usefullnes-icon.svg" alt="Удобство (иконка)" class="advatages-card__image"
+            width="52" height="56">
+          <h3 class="advatages-card__heading"> Удобство</h3>
+          <p class="advatages-card__description">Легко помещается и в карман,
+            и в маленькую сумочку</p>
+        </div>
+
+        <div class="advatages-list__card">
+          <img src="/images/vector/feature-energy-icon.svg" alt="Бодрость (иконка)" class="advatages-card__image"
+            width="52" height="56">
+          <h3 class="advatages-card__heading"> Бодрость</h3>
+          <p class="advatages-card__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+        </div>
+
+        <div class="advatages-list__card">
+          <img src="/images/vector/feature-ecology-icon.svg" alt="Экологичность (иконка)" class="advatages-card__image"
+            width="52" height="56">
+          <h3 class="advatages-card__heading"> Экологичность</h3>
+          <p class="advatages-card__description">Вся упаковка сделана
+            из перерабатываемых материалов</p>
+        </div>
+
+      </div>
 
 
-         </section>
+    </section>
 
-         <aside class = "filters">
-          
-         </aside>
+    <aside class="filters">
+      <label class="badge">Каталог</label>
+      <h2 class="filters__heading">Каталог кофейных напитков</h2>
 
-    </main>
-  </body>
+      <form action="https://echo.htmlacademy.ru" method="get" class="filters-form">
+
+        <div class="filters-prices-block">
+          <div class="block-heading">Цена</div>
+          <div class="filter-double-range">
+            <div class="wrapper">
+
+              <div class="container">
+
+                <div class="slider-track">
+
+                </div>
+                <div class = "pxline"></div>
+                <input type="range" min="0" max="900" value="0" id="slider-1" name="priceMin" oninput="slideOne()">
+                <input type="range" min="0" max="900" value="800" id="slider-2" name="priceMax" oninput="slideTwo()">
+              </div>
+
+              <div class="values">
+                <div class="range1">
+                  <span id="range1">0</span>
+                </div>
+
+                <span class = "range-devider"></span>
+
+                <div class="range2">
+                  <span id="range2">100</span>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class = "filters-milk-block">
+          <div class="block-heading">Наличие молока</div>
+
+          <ul class = "filter-milk">
+            <li>
+              <label for="noMatter">
+              <input type="radio" class="custom-radio-button" name="milkNeeded" value="noMatter" id="noMatter" checked>
+              <span class="radio-checkmark"></span>
+              <span  class="radioBtn-caption">Неважно</span>
+            </label>
+            </li>
+
+            <li>
+              <label for="onlyAnimals">
+              <input type="radio" class="custom-radio-button" name="milkNeeded" value="onlyAnimals" id="onlyAnimals">
+              <span class="radio-checkmark"></span>
+              <span class="radioBtn-caption">Только животное</span>
+              </label>
+            </li>
+
+            <li>
+              <label for="vegetable">
+                <input type="radio" class="custom-radio-button" name="milkNeeded" value="vegetable" id="vegetable">
+                <span class="radio-checkmark"></span>
+                <span class="radioBtn-caption">Только растительное</span>
+              </label>
+            </li>
+
+            <li class = "radio-disabled">
+              <label for="noMilk">
+              <input type="radio" class="custom-radio-button" name="milkNeeded" value="noMilk" id="noMilk">
+              <span class="radio-checkmark"></span>
+             <span class="radioBtn-caption">Без молока</span>
+            </label>
+            </li>
+          </ul>
+
+        </div>
+
+        <div class = "country-of-origin">
+          <div class="block-heading">Страна производителя</div>
+          <ul class = "country-of-origin__list">
+            <li>
+              <label class="switch">
+                <input type="checkbox" name="country" value="brazil" id="brazil" checked>
+                <span class="slider round"></span>
+              </label>
+              <span class="toggle-caption">Бразилия</span>
+            </li>
+
+            <li>
+              <label class="switch">
+                <input type="checkbox" name="country" value="ethiopia" id="ethiopia">
+                <span class="slider round"></span>
+              </label>
+              <span class="toggle-caption">Эфиопия</span>
+            </li>
+
+            <li>
+              <label class="switch">
+                <input type="checkbox" name="country" value="сolombia" id="сolombia">
+                <span class="slider round"></span>
+              </label>
+              <span class="toggle-caption">Колумбия</span>
+            </li>
+
+            <li>
+              <label class="switch">
+                <input type="checkbox" name="country" value="сostaRica" id="сostaRica">
+                <span class="slider round"></span>
+              </label>
+              <span class="toggle-caption">Коста-Рика</span>
+            </li>
+
+            <li>
+              <label class="switch">
+                <input type="checkbox" name="country" value="peru" id="peru" disabled>
+                <span class="slider round"></span>
+              </label>
+              <span class="toggle-caption">Перу</span>
+            </li>
+
+
+          </ul>
+
+          <button class = "form-apply js-form-apply">Применить</button>
+           <input type = "reset" class = "form-reset js-form-reset" value = "Сбросить">
+        </div>
+
+      </form>
+    </aside>
+
+  </main>
+</body>
+
 </html>
