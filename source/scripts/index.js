@@ -86,7 +86,43 @@ function runMainMenu() {
     sliderTrack.style.background = `linear-gradient(to right, transparent ${percent1}% , #9070EC ${percent1}% , #9070EC ${percent2}%, transparent ${percent2}%)`;
   }
 
+  function runSelect(){
+    const customSelect = document.querySelector('.js-dropDown-select');
+    const dropDownArrow =  document.querySelector('.js-dropDown-arrow');
+    const dropDownMenu = document.querySelector('.js-dropDown-menu');
+    const dropDownScreen = document.querySelector('.js-dropDown-screen');
+    const dropDownOptions = document.querySelectorAll('.js-dropDown-option');
+
+    //const dropDownOption = document.querySelectorAll('.js-dropDown-option');
+
+    dropDownMenu.classList.add("visually-hidden");
+    dropDownScreen.value = dropDownOptions[0].innerText;
+
+    dropDownArrow.onclick = function(){
+      if (dropDownMenu.offsetHeight == 1) {
+        dropDownMenu.classList.remove("visually-hidden");
+        dropDownArrow.classList.add("dropDown-arrow--active");
+      } else {
+        dropDownMenu.classList.add("visually-hidden");
+        dropDownArrow.classList.remove("dropDown-arrow--active");
+      }
+    }
+
+    dropDownMenu.onclick = function(evt){
+      if (evt.target && evt.target.matches("li.js-dropDown-option")) {
+        //e.target.className = "foo"; // new class name here
+        console.log("clicked " + evt.target.innerText);
+        dropDownScreen.value = evt.target.innerText;
+        dropDownOptions.forEach((item) => item.classList.remove("dropDown-option__selected"))
+       //console.log(dropDownOptions);
+       // dropDownOptions.
+        evt.target.classList.add("dropDown-option__selected");
+      }
+     // console.log("text = ", evt.target.innerText)
+    }
+  }
 
 runMainMenu();
 runSlider();
+runSelect();
 
