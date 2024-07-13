@@ -7,7 +7,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="preload" href="#" type="font/woff2" as="font">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="/vendor/leaflet/leaflet.css">
+  <script src="/vendor/leaflet/leaflet.js" defer></script>
   <script src="scripts/index.js" defer></script>
+
 </head>
 
 <body class="page__body">
@@ -287,135 +290,187 @@
 
 
 
-      <div class = "cards-grid">
+      <div class="cards-grid">
 
-        <div class = "card-item">
-          <img src="/images/catalog/coffee-can-1@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт" class="card-item__image" width = "130" height = "188">
+        <div class="card-item">
+          <img src="/images/catalog/coffee-can-1@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт"
+            class="card-item__image" width="130" height="188">
           <h3 class="card-item__caption">Декаф Флэт Уайт</h3>
-          <p class = "card-item__description">
+          <p class="card-item__description">
             Кофе без кофеина из Эфиопии с натуральным фермерским молоком
           </p>
 
-          <div class = "price-and-order">
-            <label class = "price-and-order__price">225₽</label>
-            <button class = "price-and-order__button">В корзину</button>
+          <div class="price-and-order">
+            <label class="price-and-order__price">225₽</label>
+            <button class="price-and-order__button">В корзину</button>
           </div>
         </div>
 
-        <div class = "card-item">
-          <img src="/images/catalog/coffee-can-2@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт" class="card-item__image" width = "130" height = "188">
+        <div class="card-item">
+          <img src="/images/catalog/coffee-can-2@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт"
+            class="card-item__image" width="130" height="188">
           <h3 class="card-item__caption">Декаф Флэт Уайт</h3>
-          <p class = "card-item__description">
+          <p class="card-item__description">
             Кофе без кофеина из Эфиопии с натуральным фермерским молоком
           </p>
 
-          <div class = "price-and-order">
-            <label class = "price-and-order__price">225₽</label>
-            <button class = "price-and-order__button">В корзину</button>
+          <div class="price-and-order">
+            <label class="price-and-order__price">225₽</label>
+            <button class="price-and-order__button">В корзину</button>
           </div>
         </div>
 
-        <div class = "card-item">
-          <img src="/images/catalog/coffee-can-3@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт" class="card-item__image" width = "130" height = "188">
+        <div class="card-item">
+          <img src="/images/catalog/coffee-can-3@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт"
+            class="card-item__image" width="130" height="188">
           <h3 class="card-item__caption">Декаф Флэт Уайт</h3>
-          <p class = "card-item__description">
+          <p class="card-item__description">
             Кофе без кофеина из Эфиопии с натуральным фермерским молоком
           </p>
 
-          <div class = "price-and-order">
-            <label class = "price-and-order__price">225₽</label>
-            <button class = "price-and-order__button">В корзину</button>
+          <div class="price-and-order">
+            <label class="price-and-order__price">225₽</label>
+            <button class="price-and-order__button">В корзину</button>
           </div>
         </div>
 
-        <div class = "card-item">
-          <img src="/images/catalog/coffee-can-4@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт" class="card-item__image" width = "130" height = "188">
+        <div class="card-item">
+          <img src="/images/catalog/coffee-can-4@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт"
+            class="card-item__image" width="130" height="188">
           <h3 class="card-item__caption">Декаф Флэт Уайт</h3>
-          <p class = "card-item__description">
+          <p class="card-item__description">
             Кофе без кофеина из Эфиопии с натуральным фермерским молоком
           </p>
 
-          <div class = "price-and-order">
-            <label class = "price-and-order__price">225₽</label>
-            <button class = "price-and-order__button">В корзину</button>
+          <div class="price-and-order">
+            <label class="price-and-order__price">225₽</label>
+            <button class="price-and-order__button">В корзину</button>
           </div>
         </div>
 
-        <div class = "card-item">
-          <img src="/images/catalog/coffee-can-5@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт" class="card-item__image" width = "130" height = "188">
+        <div class="card-item">
+          <img src="/images/catalog/coffee-can-5@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт"
+            class="card-item__image" width="130" height="188">
           <h3 class="card-item__caption">Декаф Флэт Уайт</h3>
-          <p class = "card-item__description">
+          <p class="card-item__description">
             Кофе без кофеина из Эфиопии с натуральным фермерским молоком
           </p>
 
-          <div class = "price-and-order">
-            <label class = "price-and-order__price">225₽</label>
-            <button class = "price-and-order__button">В корзину</button>
+          <div class="price-and-order">
+            <label class="price-and-order__price">225₽</label>
+            <button class="price-and-order__button">В корзину</button>
           </div>
         </div>
 
-        <div class = "card-item">
-          <img src="/images/catalog/coffee-can-6@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт" class="card-item__image" width = "130" height = "188">
+        <div class="card-item">
+          <img src="/images/catalog/coffee-can-6@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт"
+            class="card-item__image" width="130" height="188">
           <h3 class="card-item__caption">Декаф Флэт Уайт</h3>
-          <p class = "card-item__description">
+          <p class="card-item__description">
             Кофе без кофеина из Эфиопии с натуральным фермерским молоком
           </p>
 
-          <div class = "price-and-order">
-            <label class = "price-and-order__price">225₽</label>
-            <button class = "price-and-order__button">В корзину</button>
+          <div class="price-and-order">
+            <label class="price-and-order__price">225₽</label>
+            <button class="price-and-order__button">В корзину</button>
           </div>
         </div>
 
-        <div class = "card-item">
-          <img src="/images/catalog/coffee-can-7@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт" class="card-item__image" width = "130" height = "188">
+        <div class="card-item">
+          <img src="/images/catalog/coffee-can-7@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт"
+            class="card-item__image" width="130" height="188">
           <h3 class="card-item__caption">Декаф Флэт Уайт</h3>
-          <p class = "card-item__description">
+          <p class="card-item__description">
             Кофе без кофеина из Эфиопии с натуральным фермерским молоком
           </p>
 
-          <div class = "price-and-order">
-            <label class = "price-and-order__price">225₽</label>
-            <button class = "price-and-order__button">В корзину</button>
+          <div class="price-and-order">
+            <label class="price-and-order__price">225₽</label>
+            <button class="price-and-order__button">В корзину</button>
           </div>
         </div>
 
-        <div class = "card-item">
-          <img src="/images/catalog/coffee-can-8@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт" class="card-item__image" width = "130" height = "188">
+        <div class="card-item">
+          <img src="/images/catalog/coffee-can-8@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт"
+            class="card-item__image" width="130" height="188">
           <h3 class="card-item__caption">Декаф Флэт Уайт</h3>
-          <p class = "card-item__description">
+          <p class="card-item__description">
             Кофе без кофеина из Эфиопии с натуральным фермерским молоком
           </p>
 
-          <div class = "price-and-order">
-            <label class = "price-and-order__price">225₽</label>
-            <button class = "price-and-order__button">В корзину</button>
+          <div class="price-and-order">
+            <label class="price-and-order__price">225₽</label>
+            <button class="price-and-order__button">В корзину</button>
           </div>
         </div>
 
-          <div class = "card-item">
-            <img src="/images/catalog/coffee-can-9@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт" class="card-item__image" width = "130" height = "188">
-            <h3 class="card-item__caption">Декаф Флэт Уайт</h3>
-            <p class = "card-item__description">
-              Кофе без кофеина из Эфиопии с натуральным фермерским молоком
-            </p>
+        <div class="card-item">
+          <img src="/images/catalog/coffee-can-9@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт"
+            class="card-item__image" width="130" height="188">
+          <h3 class="card-item__caption">Декаф Флэт Уайт</h3>
+          <p class="card-item__description">
+            Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+          </p>
 
-            <div class = "price-and-order">
-              <label class = "price-and-order__price">225₽</label>
-              <button class = "price-and-order__button">В корзину</button>
-            </div>
+          <div class="price-and-order">
+            <label class="price-and-order__price">225₽</label>
+            <button class="price-and-order__button">В корзину</button>
+          </div>
         </div>
 
       </div>
 
-      <div class = "catalog-pagination">
-        
-      </div>
+      <ul class="pagination-panel">
+        <li><a href="#" class="pagination-panel__item-pevious" title="Перейти на страницу назад"></a></li>
+        <li><a href="#" class="pagination-panel__item" title="Перейти на страницу 1">1</a></li>
+        <li><a href="#" class="pagination-panel__item--selected" title="Перейти на страницу 2">2</a></li>
+        <li><a href="#" class="pagination-panel__item" title="Перейти на страницу 3">3</a></li>
+        <li><a href="#" class="pagination-panel__item-next" title="Перейти на страницу вперед"></a></li>
+      </ul>
+
 
     </section>
+    <div id="map"></div>
 
 
   </main>
+
+  <footer class="footer">
+
+    <section class="footer__logo-n-social">
+      <a href="#" class="footer__logo"></a>
+      <div class="footer__social-icons">
+        <a href="https://twitter.com/htmlacademy_ru" class="vk-icon" title="Наша группа во Вкотиакте"></a>
+        <a href="https://www.facebook.com/htmlacademy" class="pinterest-icon" title="Наша страницв на Pinterest"></a>
+        <a href="https://www.youtube.com/c/HTMLAcademyRUS" class="ok-icon" title="Наша страница в Однокласниках"></a>
+      </div>
+    </section>
+
+    <nav class = "footer-menus">
+      <div class="footer__menu-block">
+        <h4 class="footer__menu-heading">Интернет-магазин</h4>
+        <a href="#" class="menu-item" title="Перейти в каталог">Каталог</a>
+        <a href="#" class="menu-item" title="Перейти в раздел доставка">Доставка</a>
+        <a href="#" class="menu-item" title="Узнать о способах оплаты">Способы оплаты</a>
+        <a href="#" class="menu-item" title="Информация о нас">О нас</a>
+      </div>
+
+      <div class="footer__menu-block">
+        <h4 class="footer__menu-heading">Медиа</h4>
+        <a href="#" class="menu-item" title="Наш блог">Блог</a>
+        <a href="#" class="menu-item" title="Перейти в раздел с информация для СМИ">Информация для СМИ</a>
+        <a href="#" class="menu-item" title="Перейти в раздел с правовой информацией">Правовая информация</a>
+      </div>
+
+      <div class="footer__menu-block">
+        <h4 class="footer__menu-heading">Контакты</h4>
+        <address class = "footer__physical-address">Санкт-Петербург, набережная реки Карповки, дом 5</address>
+        <a href="tel:+79999999999" class="footer__telephone" title="Позвонить нам">+7 (999) 999-99-99</a>
+      </div>
+    </nav>
+
+    <section class = "footer__copyrigth-info"><p>Разработано в HTML Academy</p></section>
+  </footer>
 </body>
 
 </html>

@@ -51,7 +51,41 @@ function runMainMenu() {
 
 }
 
+function runSelect(){
+  const customSelect = document.querySelector('.js-dropDown-select');
+  const dropDownArrow =  document.querySelector('.js-dropDown-arrow');
+  const dropDownMenu = document.querySelector('.js-dropDown-menu');
+  const dropDownScreen = document.querySelector('.js-dropDown-screen');
+  const dropDownOptions = document.querySelectorAll('.js-dropDown-option');
 
+  //const dropDownOption = document.querySelectorAll('.js-dropDown-option');
+
+  dropDownMenu.classList.add("visually-hidden");
+  dropDownScreen.value = dropDownOptions[0].innerText;
+
+  dropDownArrow.onclick = function(){
+    if (dropDownMenu.offsetHeight == 1) {
+      dropDownMenu.classList.remove("visually-hidden");
+      dropDownArrow.classList.add("dropDown-arrow--active");
+    } else {
+      dropDownMenu.classList.add("visually-hidden");
+      dropDownArrow.classList.remove("dropDown-arrow--active");
+    }
+  }
+
+  dropDownMenu.onclick = function(evt){
+    if (evt.target && evt.target.matches("li.js-dropDown-option")) {
+      //e.target.className = "foo"; // new class name here
+      console.log("clicked " + evt.target.innerText);
+      dropDownScreen.value = evt.target.innerText;
+      dropDownOptions.forEach((item) => item.classList.remove("dropDown-option__selected"))
+     //console.log(dropDownOptions);
+     // dropDownOptions.
+      evt.target.classList.add("dropDown-option__selected");
+    }
+   // console.log("text = ", evt.target.innerText)
+  }
+}
 
   window.onload = function () {
     slideOne();
@@ -86,43 +120,48 @@ function runMainMenu() {
     sliderTrack.style.background = `linear-gradient(to right, transparent ${percent1}% , #9070EC ${percent1}% , #9070EC ${percent2}%, transparent ${percent2}%)`;
   }
 
-  function runSelect(){
-    const customSelect = document.querySelector('.js-dropDown-select');
-    const dropDownArrow =  document.querySelector('.js-dropDown-arrow');
-    const dropDownMenu = document.querySelector('.js-dropDown-menu');
-    const dropDownScreen = document.querySelector('.js-dropDown-screen');
-    const dropDownOptions = document.querySelectorAll('.js-dropDown-option');
 
-    //const dropDownOption = document.querySelectorAll('.js-dropDown-option');
+function renderMap(){
+  const resetButton = document.querySelector('#reset');
 
-    dropDownMenu.classList.add("visually-hidden");
-    dropDownScreen.value = dropDownOptions[0].innerText;
+const map = L.map('map')
+  .setView({
+    lat: 59.96831,
+    lng: 30.31748,
+  }, 19);
 
-    dropDownArrow.onclick = function(){
-      if (dropDownMenu.offsetHeight == 1) {
-        dropDownMenu.classList.remove("visually-hidden");
-        dropDownArrow.classList.add("dropDown-arrow--active");
-      } else {
-        dropDownMenu.classList.add("visually-hidden");
-        dropDownArrow.classList.remove("dropDown-arrow--active");
-      }
-    }
+L.tileLayer(
+  'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+  {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>',
+  },
+).addTo(map);
 
-    dropDownMenu.onclick = function(evt){
-      if (evt.target && evt.target.matches("li.js-dropDown-option")) {
-        //e.target.className = "foo"; // new class name here
-        console.log("clicked " + evt.target.innerText);
-        dropDownScreen.value = evt.target.innerText;
-        dropDownOptions.forEach((item) => item.classList.remove("dropDown-option__selected"))
-       //console.log(dropDownOptions);
-       // dropDownOptions.
-        evt.target.classList.add("dropDown-option__selected");
-      }
-     // console.log("text = ", evt.target.innerText)
-    }
-  }
+const mainPinIcon = L.icon({
+  iconUrl: '/images/vector/map-pin.svg',
+  iconSize: [52, 52],
+  iconAnchor: [26, 52],
+});
+
+const mainPinMarker = L.marker(
+  {
+    lat: 59.96831,
+    lng: 30.31748,
+  },
+  {
+    draggable: true,
+    icon: mainPinIcon,
+  },
+);
+
+mainPinMarker.addTo(map);
+
+}
+
+
+
 
 runMainMenu();
 runSlider();
 runSelect();
-
+renderMap();
