@@ -40,33 +40,33 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    xxheight:0px;
+    xxheight: 0px;
     order: 3;
 
-    .header-menu__item:first-child{
+    .header-menu__item:first-child {
       border-top: solid 1px #F0EBFF;
     }
 
-    .header-menu__item{
+    .header-menu__item {
       box-sizing: border-box;
       display: flex;
       align-items: center;
       justify-content: center;
-      xxheight:157px;
+      xxheight: 157px;
       width: 100%;
-      text-decoration:none;
+      text-decoration: none;
       text-transform: uppercase;
       font-family: "Montserrat", "Arial";
       font-weight: 500;
       font-size: 12px;
-      line-height:16px;
+      line-height: 16px;
       color: #333333;
       border-top: solid 1px #F0EBFF;
       xxborder-bottom: solid 1px #F0EBFF;
       padding: 20px;
     }
 
-    .header-menu__item:last-child{
+    .header-menu__item:last-child {
       border-bottom: solid 1px #F0EBFF;
     }
   }
@@ -79,7 +79,7 @@
     xxbackground-color: darkgoldenrod;
     width: 80%;
     height: 60px;
-    gap:8px;
+    gap: 8px;
 
     .header__login-icon {
       width: 60px;
@@ -91,7 +91,7 @@
       background-position: center;
     }
 
-    .header__basket-icon{
+    .header__basket-icon {
       width: 60px;
       height: 60px;
       xxbackground-image: url("/icons/basket-icon.svg");
@@ -101,11 +101,11 @@
       background-position: center;
     }
 
-    .header__menu-icon{
+    .header__menu-icon {
       width: 60px;
       height: 60px;
       xxbackground-image: url("/icons/menu-icon.svg");
-      background:white;
+      background: white;
       background-image: url("/icons/stack.svg#menu-icon");
       background-repeat: no-repeat;
       background-size: 16px;

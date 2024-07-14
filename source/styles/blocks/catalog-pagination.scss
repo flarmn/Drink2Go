@@ -64,3 +64,26 @@
 .pagination-panel__item-next{
   transform:scaleX(-1);
 }
+
+
+/* COMMON FOR ALL RESOLUTIONS in BLOCK*/
+
+
+/* header - mobile */
+@media (min-width: 100px) and (max-width: 767px) {
+
+}
+
+
+/* header - tablet */
+@media (min-width: 768px) and (max-width: 1439px) {
+
+}
+
+
+
+/* header - Destop  */
+@media (min-width: 1440px) {
+
+
+}
