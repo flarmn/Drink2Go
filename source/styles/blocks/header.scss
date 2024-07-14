@@ -1,22 +1,23 @@
+/* COMMON FOR ALL RESOLUTIONS in BLOCK*/
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  min-height: 60px;
-  xxbackground-color: grey;
   padding-left: 20px;
   padding-right: 20px;
 }
 
 
 
-
 /* header - mobile */
-@media (min-width: 100px) and (max-width: 767px) {
+@media only screen and (min-width: 280px) and (max-width: 767){
 
   .header {
     justify-content: center;
+    min-height: 60px;
+    background-color: green;
   }
 
 
@@ -33,6 +34,10 @@
       width: 32px;
       height: 36px;
     }
+
+    .header__logo-text {
+      display: none;
+    }
   }
 
   .header-menu {
@@ -40,7 +45,6 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    xxheight: 0px;
     order: 3;
 
     .header-menu__item:first-child {
@@ -52,8 +56,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      xxheight: 157px;
       width: 100%;
+      border-top: solid 1px #F0EBFF;
+      padding: 20px;
+
       text-decoration: none;
       text-transform: uppercase;
       font-family: "Montserrat", "Arial";
@@ -61,9 +67,6 @@
       font-size: 12px;
       line-height: 16px;
       color: #333333;
-      border-top: solid 1px #F0EBFF;
-      xxborder-bottom: solid 1px #F0EBFF;
-      padding: 20px;
     }
 
     .header-menu__item:last-child {
@@ -81,10 +84,13 @@
     height: 60px;
     gap: 8px;
 
+    .header__login-icon .icon-text,    .header__basket-icon  .icon-text{
+      display: none;
+    }
+
     .header__login-icon {
       width: 60px;
       height: 60px;
-      xxbackground-image: url("/icons/login-icon.svg");
       background-image: url("/icons/stack.svg#login-icon");
       background-repeat: no-repeat;
       background-size: 16px;
@@ -94,7 +100,6 @@
     .header__basket-icon {
       width: 60px;
       height: 60px;
-      xxbackground-image: url("/icons/basket-icon.svg");
       background-image: url("/icons/stack.svg#basket-icon");
       background-repeat: no-repeat;
       background-size: 16px;
@@ -111,62 +116,241 @@
       background-size: 16px;
       background-position: center;
       border-style: none;
+
+
     }
   }
 
 }
 
+
 /* header - tablet */
-@media (min-width: 768px) and (max-width: 1439px) {
-  .header-logo {
-    background-color: green;
-    width: 30%;
+
+@media only screen and (min-width: 768px) and (max-width: 1439px) {
+  .header {
+    justify-content: space-between;
     height: 80px;
+    background-color: red;
+    width:100%;
+  }
+
+
+  .header-logo {
+    display: flex;
+    align-items: center;
+    height: 36px;
+    width: 82px;
+    order: 0;
+
+    .header__logo-link {
+      background-image: url("/images/vector/logo/logo-short-icon.svg");
+      background-repeat: no-repeat;
+      width: 82px;
+      height: 36px;
+    }
+
+    .header__logo-text {
+      display: none;
+    }
   }
 
   .header-menu {
-    background-color: red;
-    width: 25%;
-    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    width: 378px;
+    order: 2;
+    xxbackground: red;
+    height: 100%;
+
+    .header-menu__item {
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: "Montserrat", "Arial";
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      color: #333333;
+    }
+
+    .header-menu__item:active,
+    .header-menu__item:visited,
+    .header-menu__item--active {
+      border-bottom: solid 2px #7859CF;
+    }
   }
 
-  .header-menu-mobile {
-    display: none;
-    height: 70px;
-    background-color: red;
-  }
 
   .header-user-section {
-    background-color: blue;
-    width: 30%;
-    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    xxbackground-color: darkgoldenrod;
+    width: 120px;
+    height: 100%;
+    order: 2;
+
+    .header__login-icon .icon-text,    .header__basket-icon  .icon-text{
+      display: none;
+    }
+
+    .header__login-icon {
+      width: 60px;
+      height: 100%;
+      background-image: url("/icons/stack.svg#login-icon");
+      background-repeat: no-repeat;
+      background-size: 16px;
+      background-position: center;
+    }
+
+    .header__basket-icon {
+      width: 60px;
+      height: 100%;
+      background-image: url("/icons/stack.svg#basket-icon");
+      background-repeat: no-repeat;
+      background-size: 16px;
+      background-position: center;
+    }
   }
 
-}
+    .header__menu-icon {
+      width: 60px;
+      height: 60px;
+      xxbackground-image: url("/icons/menu-icon.svg");
+      background: white;
+      background-image: url("/icons/stack.svg#menu-icon");
+      background-repeat: no-repeat;
+      background-size: 16px;
+      background-position: center;
+      border-style: none;
+    }
 
+  }
 
 
 /* header - Destop  */
-@media (min-width: 1440px) {
+
+@media screen and (min-width: 1440px) {
+
+  .header {
+    justify-content: space-between;
+    height: 80px;
+    background-color: silver;
+  }
+
 
   .header-logo {
+    display: flex;
+    align-items: center;
+    height: 36px;
+    width: 316px;
+    order: 0;
 
-    background-color: green;
-    width: 30%;
-    height: 80px;
+    .header__logo-link {
+      background-image: url("/images/vector/logo/logo-long-icon.svg");
+      background-repeat: no-repeat;
+      width: 170px;
+      height: 36px;
+    }
+
+    .header__logo-text {
+      display: flex;
+      width: 126px;
+      font-family: "Montserrat Regular";
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      text-align: left;
+      margin-left: 20px;
+    }
   }
 
   .header-menu {
-    background-color: red;
-    width: 25%;
-    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    width: 398px;
+    order: 2;
+    height: 100%;
+
+    .header-menu__item {
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: "Montserrat", "Arial";
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      color: #333333;
+    }
+
+    .header-menu__item:active,
+    .header-menu__item:visited,
+    .header-menu__item--active {
+      border-bottom: solid 2px #7859CF;
+    }
   }
 
 
   .header-user-section {
-    background-color: blue;
-    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 160px;
     height: 80px;
+    order: 2;
+
+    .header__login-icon, .header__basket-icon{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 84px;
+      height: 100%;
+
+      background-image: url("/icons/stack.svg#login-icon");
+      background-repeat: no-repeat;
+      background-size: 16px;
+      background-position: left center;
+
+
+      font-family: "Montserrat Regular";
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      color: #333333;
+    }
+
+    .header__login-icon {
+      background-image: url("/icons/stack.svg#login-icon");
+    }
+
+    .header__basket-icon {
+      background-image: url("/icons/stack.svg#basket-icon");
+      padding-left: 15px;
+    }
+
+    .header__menu-icon {
+      width: 60px;
+      height: 60px;
+      xxbackground-image: url("/icons/menu-icon.svg");
+      background: white;
+      background-image: url("/icons/stack.svg#menu-icon");
+      background-repeat: no-repeat;
+      background-size: 16px;
+      background-position: center;
+      border-style: none;
+    }
+
   }
 
 }
+

@@ -6,16 +6,23 @@ function runSlider() {
   const sliderStrip = document.querySelector('.js-frames-strip');
   let framesNumber = sliderStrip.childElementCount;
   let scrollCoords = 0;
-  let rightScrollBorder = (framesNumber - 2) * 280;
-  let leftScrollBorder = sliderStrip.scrollWidth - ((framesNumber - 3) * 280);
+  let frameWidth = sliderStrip.scrollWidth / framesNumber;
+  let rightScrollBorder = (framesNumber - 2) * frameWidth;
+  let leftScrollBorder = sliderStrip.scrollWidth - ((framesNumber - 3) * frameWidth);
 
+  sliderStrip.scroll({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
 
+  console.log("frmae width = ", frameWidth)
 
   sliderLeftArrow.onclick = function () {
-    if (sliderStrip.scrollLeft >= 280) {
+    if (sliderStrip.scrollLeft >= frameWidth) {
       sliderStrip.scroll({
         top: 0,
-        left: `${scrollCoords -= 280}`,
+        left: `${scrollCoords -= frameWidth}`,
         behavior: "smooth",
       });
     }
@@ -26,7 +33,7 @@ function runSlider() {
     if (sliderStrip.scrollLeft <= rightScrollBorder) {
       sliderStrip.scroll({
         top: 0,
-        left: `${scrollCoords += 280}`,
+        left: `${scrollCoords += frameWidth}`,
         behavior: "smooth",
       });
     }
@@ -37,23 +44,35 @@ function runSlider() {
 
 
 function runMainMenu() {
+  const header = document.querySelector('.js-header');
   const mobileMenu = document.querySelector('.js-header-menu');
   const mobileMenuButton = document.querySelector('.js-header__menu-icon');
-  mobileMenu.classList.add("visually-hidden");
 
-  mobileMenuButton.onclick = function () {
-    if (mobileMenu.offsetHeight == 1) {
-      mobileMenu.classList.remove("visually-hidden");
-    } else {
-      mobileMenu.classList.add("visually-hidden");
-    }
+  if (header.offsetWidth < 768) {
+  mobileMenu.classList.add("visually-hidden");
+  mobileMenuButton.classList.remove("visually-hidden");
   }
+
+  console.log(header.offsetWidth);
+  if (header.offsetWidth < 768) {
+    mobileMenuButton.onclick = function () {
+      if (mobileMenu.offsetHeight == 1) {
+        mobileMenu.classList.remove("visually-hidden");
+      } else {
+        mobileMenu.classList.add("visually-hidden");
+      }
+    }
+  } else {
+    mobileMenuButton.classList.add("visually-hidden");
+    mobileMenu.classList.remove("visually-hidden");
+  }
+
 
 }
 
-function runSelect(){
+function runSelect() {
   const customSelect = document.querySelector('.js-dropDown-select');
-  const dropDownArrow =  document.querySelector('.js-dropDown-arrow');
+  const dropDownArrow = document.querySelector('.js-dropDown-arrow');
   const dropDownMenu = document.querySelector('.js-dropDown-menu');
   const dropDownScreen = document.querySelector('.js-dropDown-screen');
   const dropDownOptions = document.querySelectorAll('.js-dropDown-option');
@@ -63,7 +82,7 @@ function runSelect(){
   dropDownMenu.classList.add("visually-hidden");
   dropDownScreen.value = dropDownOptions[0].innerText;
 
-  dropDownArrow.onclick = function(){
+  dropDownArrow.onclick = function () {
     if (dropDownMenu.offsetHeight == 1) {
       dropDownMenu.classList.remove("visually-hidden");
       dropDownArrow.classList.add("dropDown-arrow--active");
@@ -73,95 +92,106 @@ function runSelect(){
     }
   }
 
-  dropDownMenu.onclick = function(evt){
+  dropDownMenu.onclick = function (evt) {
     if (evt.target && evt.target.matches("li.js-dropDown-option")) {
       //e.target.className = "foo"; // new class name here
       console.log("clicked " + evt.target.innerText);
       dropDownScreen.value = evt.target.innerText;
       dropDownOptions.forEach((item) => item.classList.remove("dropDown-option__selected"))
-     //console.log(dropDownOptions);
-     // dropDownOptions.
+      //console.log(dropDownOptions);
+      // dropDownOptions.
       evt.target.classList.add("dropDown-option__selected");
     }
-   // console.log("text = ", evt.target.innerText)
+    // console.log("text = ", evt.target.innerText)
   }
 }
 
-  window.onload = function () {
-    slideOne();
-    slideTwo();
-  };
+window.onload = function () {
+  slideOne();
+  slideTwo();
 
-  let sliderOne = document.getElementById("slider-1");
-  let sliderTwo = document.getElementById("slider-2");
-  let displayValOne = document.getElementById("range1");
-  let displayValTwo = document.getElementById("range2");
-  let minGap = 0;
-  let sliderTrack = document.querySelector(".slider-track");
-  let sliderMaxValue = document.getElementById("slider-1").max;
+  runMainMenu();
+  runSlider();
+  runSelect();
+  renderMap();
+};
 
-  function slideOne() {
-    if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
-      sliderOne.value = parseInt(sliderTwo.value) - minGap;
-    }
-    displayValOne.textContent = sliderOne.value;
-    fillColor();
+window.onresize = function () {
+  runSlider();
+  runMainMenu();
+}
+
+let sliderOne = document.getElementById("slider-1");
+let sliderTwo = document.getElementById("slider-2");
+let displayValOne = document.getElementById("range1");
+let displayValTwo = document.getElementById("range2");
+let minGap = 0;
+let sliderTrack = document.querySelector(".slider-track");
+let sliderMaxValue = document.getElementById("slider-1").max;
+
+function slideOne() {
+  if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+    sliderOne.value = parseInt(sliderTwo.value) - minGap;
   }
-  function slideTwo() {
-    if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
-      sliderTwo.value = parseInt(sliderOne.value) + minGap;
-    }
-    displayValTwo.textContent = sliderTwo.value;
-    fillColor();
+  displayValOne.textContent = sliderOne.value;
+  fillColor();
+}
+function slideTwo() {
+  if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+    sliderTwo.value = parseInt(sliderOne.value) + minGap;
   }
-  function fillColor() {
-    percent1 = (sliderOne.value / sliderMaxValue) * 100;
-    percent2 = (sliderTwo.value / sliderMaxValue) * 100;
-    sliderTrack.style.background = `linear-gradient(to right, transparent ${percent1}% , #9070EC ${percent1}% , #9070EC ${percent2}%, transparent ${percent2}%)`;
-  }
+  displayValTwo.textContent = sliderTwo.value;
+  fillColor();
+}
+function fillColor() {
+  percent1 = (sliderOne.value / sliderMaxValue) * 100;
+  percent2 = (sliderTwo.value / sliderMaxValue) * 100;
+  sliderTrack.style.background = `linear-gradient(to right, transparent ${percent1}% , #9070EC ${percent1}% , #9070EC ${percent2}%, transparent ${percent2}%)`;
+}
 
 
-function renderMap(){
+function renderMap() {
   const resetButton = document.querySelector('#reset');
 
-const map = L.map('map')
-  .setView({
-    lat: 59.96831,
-    lng: 30.31748,
-  }, 19);
+  const map = L.map('map')
+    .setView({
+      lat: 59.96831,
+      lng: 30.31748,
+    }, 19);
 
-L.tileLayer(
-  'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-  {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>',
-  },
-).addTo(map);
+  L.tileLayer(
+    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>',
+    },
+  ).addTo(map);
 
-const mainPinIcon = L.icon({
-  iconUrl: '/images/vector/map-pin.svg',
-  iconSize: [52, 52],
-  iconAnchor: [26, 52],
-});
+  const mainPinIcon = L.icon({
+    iconUrl: '/images/vector/map-pin.svg',
+    iconSize: [52, 52],
+    iconAnchor: [26, 52],
+  });
 
-const mainPinMarker = L.marker(
-  {
-    lat: 59.96831,
-    lng: 30.31748,
-  },
-  {
-    draggable: true,
-    icon: mainPinIcon,
-  },
-);
+  const mainPinMarker = L.marker(
+    {
+      lat: 59.96831,
+      lng: 30.31748,
+    },
+    {
+      draggable: true,
+      icon: mainPinIcon,
+    },
+  );
 
-mainPinMarker.addTo(map);
+  mainPinMarker.addTo(map);
 
 }
 
 
 
-
+/*
 runMainMenu();
 runSlider();
 runSelect();
 renderMap();
+*/

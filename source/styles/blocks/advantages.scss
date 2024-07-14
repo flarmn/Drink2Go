@@ -1,76 +1,150 @@
-.advantages {
-  display: flex;
-  flex-direction: column;
-  width: 280px;
-  margin:auto;
 
-  .advatages__heading {
-    font-family: "Montserrat Bold";
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 36px;
-    text-align: center;
-    color: #333333;
-  }
-
-  .advatages-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-.advatages-list__card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 280px;
-  margin-bottom: 32px;
-
-  .advatages-card__image {
-    xxbackground-color: silver;
-  }
-
-  .advatages-card__heading {
-    //styleName: Heading3 Mobile;
-    font-family: "Montserrat Bold";
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 32px;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    margin-top: 14px;
-    color: #333333;
-  }
-
-  .advatages-card__description {
-    //styleName: Regular Text Mobile;
-    font-family: "Montserrat Regular";
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    text-align: center;
-    color: #333333;
-    margin:0;
-    padding:0;
-    margin-top:5px;
-
-  }
-}
 
 
 /* COMMON FOR ALL RESOLUTIONS in BLOCK*/
 
 
 /* header - mobile */
-@media (min-width: 100px) and (max-width: 767px) {
+@media (min-width: 280px) and (max-width: 767px) {
+  .advantages {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    margin:auto;
 
+    .advatages__heading {
+      font-family: "Montserrat Bold";
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 36px;
+      text-align: center;
+      color: #333333;
+    }
+
+    .advatages-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .advatages-list__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 280px;
+    margin-bottom: 32px;
+
+    .advatages-card__image {
+      xxbackground-color: silver;
+    }
+
+    .advatages-card__heading {
+      //styleName: Heading3 Mobile;
+      font-family: "Montserrat Bold";
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 32px;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      margin-top: 14px;
+      color: #333333;
+    }
+
+    .advatages-card__description {
+      //styleName: Regular Text Mobile;
+      font-family: "Montserrat Regular";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      text-align: center;
+      color: #333333;
+      margin:0;
+      padding:0;
+      margin-top:5px;
+
+    }
+  }
 }
 
 
 /* header - tablet */
 @media (min-width: 768px) and (max-width: 1439px) {
+  .advantages {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin:auto;
+
+
+    .advatages__heading {
+      font-family: "Montserrat Bold";
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 36px;
+      text-align: center;
+      color: #333333;
+    }
+
+    .advatages-list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      padding:30px;
+      gap:30px;
+    }
+  }
+
+  .advatages-list__card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 43%;
+
+    .advatages-card__image {
+      xxbackground-color: silver;
+    }
+
+    .advatages-card__text-content{
+      display:flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-left: 25px;
+    }
+
+    .advatages-card__heading {
+      //styleName: Heading3 Mobile;
+      font-family: "Montserrat Bold";
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 32px;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      xxmargin-top: 14px;
+      color: #333333;
+
+    }
+
+    .advatages-card__description {
+      //styleName: Regular Text Mobile;
+      font-family: "Montserrat Regular";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      text-align: left;
+      color: #333333;
+      margin:0;
+      padding:0;
+      margin-top:5px;
+
+    }
+  }
 
 }
 
