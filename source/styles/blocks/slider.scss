@@ -48,6 +48,14 @@
       height: 280px;
     }
 
+    .image-slider__pc-view {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      flex-shrink: 0;
+      margin-left: 20px;
+    }
 
     .badge {
       font-family: "Montserrat Bold";
@@ -58,6 +66,8 @@
       text-transform: uppercase;
       color: #7859CF;
       margin-top: unset;
+      text-align:center;
+      margin:auto;
     }
 
     .slider__heading {
@@ -141,7 +151,7 @@
     cursor: pointer;
   }
 
-  .image-slider__navigation{
+  .image-slider__navigation {
     display: none;
   }
 }
@@ -196,7 +206,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:flex-end;
+    justify-content: flex-end;
     min-width: 100%;
     height: 828px;
 
@@ -209,7 +219,7 @@
       margin-right: 10px;
     }
 
-    .image-slider__pc-view{
+    .image-slider__pc-view {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -217,6 +227,7 @@
       flex-shrink: 0;
       margin-left: 20px;
     }
+
     .badge {
       font-family: "Montserrat Bold";
       font-size: 12px;
@@ -320,7 +331,7 @@
     cursor: pointer;
   }
 
-  .image-slider__navigation{
+  .image-slider__navigation {
     display: none;
   }
 }
@@ -376,7 +387,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content:flex-start;
+    justify-content: flex-start;
     flex-wrap: wrap;
     min-width: 100%;
     height: 828px;
@@ -391,7 +402,7 @@
       flex-shrink: 0;
     }
 
-    .image-slider__pc-view{
+    .image-slider__pc-view {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -504,20 +515,20 @@
     cursor: pointer;
   }
 
-  .image-slider__navigation{
+  .image-slider__navigation {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
-    list-style:none;
+    list-style: none;
     column-gap: 8px;
     width: 100%;
     min-width: 100%;
     height: 24px;
-    position:absolute;
+    position: absolute;
 
-   transform: translateY(300px);
+    transform: translateY(300px);
 
-    .slider-navigation__item{
+    .slider-navigation__item {
       width: 62px;
       height: 4px;
       background-color: white;
