@@ -1,15 +1,39 @@
 /* в этот файл добавляет скрипты*/
 
 function runSlider() {
+  const ImageSlider = document.querySelector('.js-image-slider');
   const sliderLeftArrow = document.querySelector('.js-left-arrow');
   const sliderRightArrow = document.querySelector('.js-right-arrow');
   const sliderStrip = document.querySelector('.js-frames-strip');
+  const imageSliderNavigation = document.querySelector('.js-image-slider__navigation');
+  const sliderNavigationItem = `
+  <li class="slider-navigation__item js-slider-navigation__item"></li>
+  `
+
   let framesNumber = sliderStrip.childElementCount;
   let scrollCoords = 0;
   let frameWidth = sliderStrip.scrollWidth / framesNumber;
   let rightScrollBorder = (framesNumber - 2) * frameWidth;
-  let leftScrollBorder = sliderStrip.scrollWidth - ((framesNumber - 3) * frameWidth);
 
+  if (ImageSlider.offsetWidth > 1439) {
+    imageSliderNavigation.innerHTML = "";
+    for(let x = 0; x <= (framesNumber-1); x++){
+      imageSliderNavigation.innerHTML += sliderNavigationItem;
+    }
+
+    imageSliderNavigation.onclick = function(evt){
+      if (evt.target && evt.target.matches("li.js-slider-navigation__item")) {
+        let navItemIndex = Array.from(evt.target.parentNode.children).indexOf(evt.target);
+        scrollCoords = navItemIndex * frameWidth;
+        console.log( navItemIndex,  scrollCoords);
+        sliderStrip.scroll({
+          top: 0,
+          left: `${scrollCoords}`,
+          behavior: "smooth",
+        });
+      }
+    }
+  }
   sliderStrip.scroll({
     top: 0,
     left: 0,
@@ -29,7 +53,7 @@ function runSlider() {
   }
 
   sliderRightArrow.onclick = function () {
-    //console.log("right arrow clicked -> ", sliderStrip.scrollWidth, " -> ", sliderStrip.scrollLeft, " -> ", scrollCoords, "elements number = ", framesNumber, rightScrollBorder);
+
     if (sliderStrip.scrollLeft <= rightScrollBorder) {
       sliderStrip.scroll({
         top: 0,
@@ -77,8 +101,6 @@ function runSelect() {
   const dropDownScreen = document.querySelector('.js-dropDown-screen');
   const dropDownOptions = document.querySelectorAll('.js-dropDown-option');
 
-  //const dropDownOption = document.querySelectorAll('.js-dropDown-option');
-
   dropDownMenu.classList.add("visually-hidden");
   dropDownScreen.value = dropDownOptions[0].innerText;
 
@@ -94,15 +116,12 @@ function runSelect() {
 
   dropDownMenu.onclick = function (evt) {
     if (evt.target && evt.target.matches("li.js-dropDown-option")) {
-      //e.target.className = "foo"; // new class name here
+
       console.log("clicked " + evt.target.innerText);
       dropDownScreen.value = evt.target.innerText;
       dropDownOptions.forEach((item) => item.classList.remove("dropDown-option__selected"))
-      //console.log(dropDownOptions);
-      // dropDownOptions.
       evt.target.classList.add("dropDown-option__selected");
     }
-    // console.log("text = ", evt.target.innerText)
   }
 }
 
