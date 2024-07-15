@@ -126,6 +126,7 @@ function runSelect() {
 }
 
 window.onload = function () {
+
   slideOne();
   slideTwo();
 
@@ -133,6 +134,7 @@ window.onload = function () {
   runSlider();
   runSelect();
   renderMap();
+
 };
 
 window.onresize = function () {
@@ -205,12 +207,3 @@ function renderMap() {
   mainPinMarker.addTo(map);
 
 }
-
-
-
-/*
-runMainMenu();
-runSlider();
-runSelect();
-renderMap();
-*/

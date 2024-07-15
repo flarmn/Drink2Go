@@ -17,14 +17,12 @@
   .header {
     justify-content: center;
     min-height: 60px;
-    background-color: green;
   }
 
 
   .header-logo {
     display: flex;
     align-items: center;
-    xxbackground-color: green;
     height: 60px;
     width: 20%;
 
@@ -79,7 +77,6 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    xxbackground-color: darkgoldenrod;
     width: 80%;
     height: 60px;
     gap: 8px;
@@ -109,7 +106,6 @@
     .header__menu-icon {
       width: 60px;
       height: 60px;
-      xxbackground-image: url("/icons/menu-icon.svg");
       background: white;
       background-image: url("/icons/stack.svg#menu-icon");
       background-repeat: no-repeat;
@@ -187,7 +183,6 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    xxbackground-color: darkgoldenrod;
     width: 120px;
     height: 100%;
     order: 2;
@@ -218,7 +213,6 @@
     .header__menu-icon {
       width: 60px;
       height: 60px;
-      xxbackground-image: url("/icons/menu-icon.svg");
       background: white;
       background-image: url("/icons/stack.svg#menu-icon");
       background-repeat: no-repeat;
@@ -339,7 +333,6 @@
     .header__menu-icon {
       width: 60px;
       height: 60px;
-      xxbackground-image: url("/icons/menu-icon.svg");
       background: white;
       background-image: url("/icons/stack.svg#menu-icon");
       background-repeat: no-repeat;

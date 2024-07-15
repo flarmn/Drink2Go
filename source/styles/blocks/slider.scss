@@ -9,12 +9,10 @@
     margin: auto;
 
     .arrow-controls__left-arrow {
-      xxposition: absolute;
       height: 656px;
       width: 20px;
       background-image: url("/icons/stack.svg#arrow-left");
       background-position: 0px -30px;
-
     }
 
     .slider__frames-strip {
@@ -211,7 +209,14 @@
       margin-right: 10px;
     }
 
-
+    .image-slider__pc-view{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 50%;
+      flex-shrink: 0;
+      margin-left: 20px;
+    }
     .badge {
       font-family: "Montserrat Bold";
       font-size: 12px;
@@ -251,7 +256,6 @@
       text-align: center;
 
       color: #333333;
-      xxpadding-left: 20px;
       padding-right: 20px;
       order: 2;
     }
@@ -330,7 +334,6 @@
     justify-content: center;
     align-items: center;
     background: rgb(243, 235, 225);
-    xxbackground: linear-gradient(180deg, rgba(243, 235, 225, 1) 77%, rgba(255, 255, 255, 1) 77%);
     min-width: 100%;
     height: 714px;
     margin: auto;
@@ -339,7 +342,6 @@
 
     .arrow-controls__left-arrow {
       display: flex;
-      xxposition: absolute;
       height: 100%;
       width: 80px;
       background-image: url("/icons/stack.svg#arrow-left");
@@ -438,7 +440,6 @@
       text-align: left;
 
       color: #333333;
-      xxpadding-left: 20px;
       padding-right: 20px;
       order: 2;
     }

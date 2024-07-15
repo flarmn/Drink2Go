@@ -450,13 +450,16 @@
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    width: 280px;
+    width: 100%;
     margin: auto;
+    padding-left:20px;
+    padding-right:20px;
+
 
     .footer__logo {
-      width: 82px;
+      width: 170px;
       height: 36px;
-      background-image: url("/images/vector/logo/logo-short-icon.svg");
+      background-image: url("/images/vector/logo/logo-long-icon.svg");
     }
   }
 
@@ -491,18 +494,16 @@
     }
   }
 
-  .footer-menus {
-    /*
-    width: 280px;
-    margin: auto;
-    */
+  .footer-menus{
+    display:flex;
+    align-items: flex-start;
   }
+
 
   .footer__menu-block {
     display: flex;
     flex-direction: column;
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 33%;
     border-top: solid 1px #F0EBFF;
 
     .footer__menu-heading {

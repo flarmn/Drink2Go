@@ -142,6 +142,63 @@
 
 /* header - Destop  */
 @media (min-width: 1440px) {
+  .pagination-panel {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 8px;
+    width: 100%;
+    padding: 0;
+    list-style: none;
 
+    margin-top: 40px;
+    margin-bottom: 90px;
+    padding-right: 20px;
+  }
+
+  .pagination-panel a {
+    text-decoration: none;
+  }
+
+  .pagination-panel__item,
+  .pagination-panel__item--selected,
+  .pagination-panel__item-pevious,
+  .pagination-panel__item-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: #7859CF;
+
+    width: 40px;
+    height: 40px;
+    border-style: none;
+    cursor: pointer;
+
+    font-family: "Montserrat Regular";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+
+
+  }
+
+  .pagination-panel__item--selected {
+    font-family: "Montserrat Regular";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+
+    background-color: #F8F8F8;
+    color: #000000;
+  }
+
+
+  .pagination-panel__item-pevious, .pagination-panel__item-next{
+    background-image: unset;
+    width:91px;
+  }
 
 }
