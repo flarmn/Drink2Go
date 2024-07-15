@@ -1,7 +1,7 @@
 /* header - mobile */
 @media (min-width: 280px) and (max-width: 767px) {
 
-  .slider {
+  .image-slider {
     display: flex;
     background-color: #F3EBE1;
     width: 320px;
@@ -148,7 +148,7 @@
 
 /* header - tablet */
 @media (min-width: 768px) and (max-width: 1439px) {
-  .slider {
+  .image-slider {
     display: flex;
     justify-content: center;
     background: rgb(243, 235, 225);

@@ -132,17 +132,8 @@
 
 
   .pagination-panel__item-pevious, .pagination-panel__item-next{
-    background-image: url("/icons/stack.svg#arrow-left");
-    background-repeat: no-repeat;
-    background-size: 10px;
-    background-position: center;
-
-
-  }
-
-
-  .pagination-panel__item-next{
-    transform:scaleX(-1);
+    background-image: unset;
+    width:91px;
   }
 
 }
