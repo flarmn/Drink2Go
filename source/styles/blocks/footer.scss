@@ -16,6 +16,8 @@
     height: 36px;
     background-image: url("/images/vector/logo/logo-short-icon.svg");
   }
+
+
 }
 
 .footer__social-icons {
@@ -461,6 +463,8 @@
       height: 36px;
       background-image: url("/images/vector/logo/logo-long-icon.svg");
     }
+
+
   }
 
   .footer__social-icons {
@@ -485,12 +489,25 @@
       background-image: url("/images/vector/social/vk-icon.svg");
     }
 
+    .vk-icon:hover{
+      background-image: url("/images/vector/social/vk-icon_hover.svg");
+    }
+
+
     .pinterest-icon {
       background-image: url("/images/vector/social/pinterest-icon.svg");
     }
 
+    .pinterest-icon:hover {
+      background-image: url("/images/vector/social/pinterest-icon_hover.svg");
+    }
+
     .ok-icon {
       background-image: url("/images/vector/social/ok-icon.svg");
+    }
+
+    .ok-icon:hover {
+      background-image: url("/images/vector/social/ok-icon_hover.svg");
     }
   }
 
