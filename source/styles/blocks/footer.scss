@@ -590,13 +590,24 @@
     line-height: 16px;
 
 
-    p{
+     a{
       padding-right: 17px;
       background-image: url("/images/vector/logo/logo-academy-default.svg");
       background-repeat: no-repeat;
       background-size: 13px 16px;
       background-position: right center;
+
+      text-decoration: none;
+      color: #BDBDBD;
+      margin-left: 3px;
     }
+
+    a:hover{
+      background-image: url("/images/vector/logo/logo-academy-focus.svg");
+      color: #7859CF;
+    }
+
+
 
   }
 
