@@ -26,7 +26,7 @@
 
 ```scss
 @font-face {
-  font-family: "Raleway";
+  font-family: "Montserrat Regular", "Arial";: "Raleway";
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -38,7 +38,7 @@
 
 ```css
 @font-face {
-  font-family: "Raleway";
+  font-family: "Montserrat Regular", "Arial";: "Raleway";
   font-weight: 400;
   font-style: normal;
   font-display: swap;

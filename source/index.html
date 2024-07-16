@@ -3,7 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Название проекта</title>
+
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicons/apple.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <title>Кофейные напитки от Drink2Go</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preload" href="#" type="font/woff2" as="font">
   <link rel="stylesheet" href="styles/styles.css">
@@ -30,13 +36,13 @@
     <div class="header-user-section">
       <a href="#" class="header__login-icon" title="Авторизация на сайте"><span class="icon-text">Войти</span></a>
       <a href="#" class="header__basket-icon" title="Корзина"><span class="icon-text">Корзина</span></a>
-      <button class="header__menu-icon js-header__menu-icon"></button>
+      <button class="header__menu-icon--close js-header__menu-icon"></button>
     </div>
 
   </header>
 
   <main>
-    <h1 hidden>Страница для старта - test</h1>
+    <h1 class="visually-hidden">Drink2Go — это интернет-магазин по продаже кофейных напитков</h1>
 
     <section class="image-slider js-image-slider">
       <div class="arrow-controls__left-arrow js-left-arrow"></div>
@@ -45,12 +51,12 @@
         <div class="slider__frame">
 
           <picture>
-            <source media="(min-width: 1440px)" srcset="./images/slider/slider_flat_white_desktop@1x.png 1x, ./images/slider/slider_flat_white_desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="./images/slider/slider_flat_white_tablet@1x.png 1x, ./images/slider/slider_flat_white_tablet@2x.png 2x">
+            <source media="(min-width: 1440px)"
+              srcset="./images/slider/slider_flat_white_desktop@1x.png 1x, ./images/slider/slider_flat_white_desktop@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="./images/slider/slider_flat_white_tablet@1x.png 1x, ./images/slider/slider_flat_white_tablet@2x.png 2x">
             <img src="./images/slider/slider_flat_white_mobile@1x.png"
-            srcset="./images/slider/slider_flat_white_mobile@2x.png 2x"
-            alt="Decaf Flat White"
-            class="slider__image">
+              srcset="./images/slider/slider_flat_white_mobile@2x.png 2x" alt="Decaf Flat White" class="slider__image">
           </picture>
 
           <!-- img src="./images/slider/slider_flat_white_tablet@1x.png" title="Decaf Flat White" class="slider__image" test-->
@@ -67,18 +73,19 @@
               <button class="slider__orderButton">Заказать</button>
             </div>
           </div>
+
           <ul class="image-slider__navigation js-image-slider__navigation"></ul>
         </div>
 
         <div class="slider__frame">
           <!-- img src="./images/slider/lavander_mobile@1x.png" title="Decaf Flat White" class="slider__image" -->
           <picture>
-            <source media="(min-width: 1440px)" srcset="./images/slider/lavender_desktop@1x.png 1x, ./images/slider/lavender_desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="./images/slider/lavender_tablet@1x.png 1x, ./images/slider/lavender_tablet@2x.png 2x">
-            <img src="./images/slider/lavender_mobile@1x.png"
-            srcset="./images/slider/lavender_mobile@2x.png 2x"
-            alt="Lavandr Latte"
-            class="slider__image">
+            <source media="(min-width: 1440px)"
+              srcset="/images/slider/lavender_desktop@1x.png 1x, /images/slider/lavender_desktop@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="/images/slider/lavender_tablet@1x.png 1x, /images/slider/lavender_tablet@2x.png 2x">
+            <img src="/images/slider/lavender_mobile@1x.png" srcset="/images/slider/lavender_mobile@2x.png 2x"
+              alt="Lavandr Latte" class="slider__image">
           </picture>
           <div class="image-slider__pc-view">
             <label class='badge'>Новинка!</label>
@@ -99,12 +106,12 @@
         <div class="slider__frame">
           <!-- img src="./images/slider/triple_mobile@1x.png" title="Decaf Flat White" class="slider__image" -->
           <picture>
-            <source media="(min-width: 1440px)" srcset="./images/slider/triple_desktop@1x.png 1x, ./images/slider/triple_desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="./images/slider/triple_tablet@1x.png 1x, ./images/slider/triple_tablet@2x.png 2x">
-            <img src="./images/slider/triple_mobile@1x.png"
-            srcset="./images/slider/triple_mobile@2x.png 2x"
-            alt="Lavandr Latte"
-            class="slider__image">
+            <source media="(min-width: 1440px)"
+              srcset="./images/slider/triple_desktop@1x.png 1x, ./images/slider/triple_desktop@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="./images/slider/triple_tablet@1x.png 1x, ./images/slider/triple_tablet@2x.png 2x">
+            <img src="./images/slider/triple_mobile@1x.png" srcset="./images/slider/triple_mobile@2x.png 2x"
+              alt="Lavandr Latte" class="slider__image">
           </picture>
           <div class="image-slider__pc-view">
             <label class='badge'>Новинка!</label>
@@ -217,8 +224,6 @@
                         <span id="range2">100</span>
                       </div>
                     </div>
-
-
                   </div>
                 </div>
               </div>
@@ -350,12 +355,10 @@
             <div class="card-item">
               <!-- img src="./images/catalog/coffee-can-1@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт"
                 class="card-item__image" width="130" height="188" -->
-                <picture>
-                  <img src="./images/catalog/coffee-can-1@1x.png"
-                  srcset="./images/catalog/coffee-can-1@2x.png 2x"
-                  alt="Кофе без кофеина - Декаф Флэт Уайт"
-                  class="card-item__image"  width="130" height="188" >
-                </picture>
+              <picture>
+                <img src="./images/catalog/coffee-can-1@1x.png" srcset="./images/catalog/coffee-can-1@2x.png 2x"
+                  alt="Кофе без кофеина - Декаф Флэт Уайт" class="card-item__image" width="130" height="188">
+              </picture>
               <h3 class="card-item__caption">Декаф Флэт Уайт</h3>
               <p class="card-item__description">
                 Кофе без кофеина из Эфиопии с натуральным фермерским молоком
@@ -370,12 +373,10 @@
             <div class="card-item">
               <!-- img src="./images/catalog/coffee-can-2@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт"
                 class="card-item__image" width="130" height="188" -->
-                <picture>
-                  <img src="./images/catalog/coffee-can-2@1x.png"
-                  srcset="./images/catalog/coffee-can-2@2x.png 2x"
-                  alt="Кофе без кофеина - Декаф Флэт Уайт"
-                  class="card-item__image" width="130" height="188">
-                </picture>
+              <picture>
+                <img src="./images/catalog/coffee-can-2@1x.png" srcset="./images/catalog/coffee-can-2@2x.png 2x"
+                  alt="Кофе без кофеина - Декаф Флэт Уайт" class="card-item__image" width="130" height="188">
+              </picture>
               <h3 class="card-item__caption">Декаф Флэт Уайт</h3>
               <p class="card-item__description">
                 Кофе без кофеина из Эфиопии с натуральным фермерским молоком
@@ -390,12 +391,10 @@
             <div class="card-item">
               <!-- img src="./images/catalog/coffee-can-3@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт"
                 class="card-item__image" width="130" height="188" -->
-                <picture>
-                  <img src="./images/catalog/coffee-can-3@1x.png"
-                  srcset="./images/catalog/coffee-can-3@2x.png 2x"
-                  alt="Кофе без кофеина - Декаф Флэт Уайт"
-                  class="card-item__image" width="130" height="188">
-                </picture>
+              <picture>
+                <img src="./images/catalog/coffee-can-3@1x.png" srcset="./images/catalog/coffee-can-3@2x.png 2x"
+                  alt="Кофе без кофеина - Декаф Флэт Уайт" class="card-item__image" width="130" height="188">
+              </picture>
               <h3 class="card-item__caption">Декаф Флэт Уайт</h3>
               <p class="card-item__description">
                 Кофе без кофеина из Эфиопии с натуральным фермерским молоком
@@ -410,12 +409,10 @@
             <div class="card-item">
               <!-- img src="./images/catalog/coffee-can-4@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт"
                 class="card-item__image" width="130" height="188" -->
-                <picture>
-                  <img src="./images/catalog/coffee-can-4@1x.png"
-                  srcset="./images/catalog/coffee-can-4@2x.png 2x"
-                  alt="Кофе без кофеина - Декаф Флэт Уайт"
-                  class="card-item__image" width="130" height="188">
-                </picture>
+              <picture>
+                <img src="./images/catalog/coffee-can-4@1x.png" srcset="./images/catalog/coffee-can-4@2x.png 2x"
+                  alt="Кофе без кофеина - Декаф Флэт Уайт" class="card-item__image" width="130" height="188">
+              </picture>
               <h3 class="card-item__caption">Декаф Флэт Уайт</h3>
               <p class="card-item__description">
                 Кофе без кофеина из Эфиопии с натуральным фермерским молоком
@@ -430,12 +427,10 @@
             <div class="card-item">
               <!-- img src="./images/catalog/coffee-can-5@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт"
                 class="card-item__image" width="130" height="188" -->
-                <picture>
-                  <img src="./images/catalog/coffee-can-5@1x.png"
-                  srcset="./images/catalog/coffee-can-5@2x.png.png 2x"
-                  alt="Кофе без кофеина - Декаф Флэт Уайт"
-                  class="card-item__image" width="130" height="188">
-                </picture>
+              <picture>
+                <img src="./images/catalog/coffee-can-5@1x.png" srcset="./images/catalog/coffee-can-5@2x.png.png 2x"
+                  alt="Кофе без кофеина - Декаф Флэт Уайт" class="card-item__image" width="130" height="188">
+              </picture>
               <h3 class="card-item__caption">Декаф Флэт Уайт</h3>
               <p class="card-item__description">
                 Кофе без кофеина из Эфиопии с натуральным фермерским молоком
@@ -450,12 +445,10 @@
             <div class="card-item">
               <!-- img src="./images/catalog/coffee-can-6@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт"
                 class="card-item__image" width="130" height="188" -->
-                <picture>
-                  <img src="./images/catalog/coffee-can-6@1x.png"
-                  srcset="./images/catalog/coffee-can-6@2x.png 2x"
-                  alt="Кофе без кофеина - Декаф Флэт Уайт"
-                  class="card-item__image" width="130" height="188">
-                </picture>
+              <picture>
+                <img src="./images/catalog/coffee-can-6@1x.png" srcset="./images/catalog/coffee-can-6@2x.png 2x"
+                  alt="Кофе без кофеина - Декаф Флэт Уайт" class="card-item__image" width="130" height="188">
+              </picture>
               <h3 class="card-item__caption">Декаф Флэт Уайт</h3>
               <p class="card-item__description">
                 Кофе без кофеина из Эфиопии с натуральным фермерским молоком
@@ -470,12 +463,10 @@
             <div class="card-item">
               <!-- img src="./images/catalog/coffee-can-7@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт"
                 class="card-item__image" width="130" height="188" -->
-                <picture>
-                  <img src="./images/catalog/coffee-can-7@1x.png"
-                  srcset="./images/catalog/coffee-can-7@2x.png 2x"
-                  alt="Кофе без кофеина - Декаф Флэт Уайт"
-                  class="card-item__image" width="130" height="188">
-                </picture>
+              <picture>
+                <img src="./images/catalog/coffee-can-7@1x.png" srcset="./images/catalog/coffee-can-7@2x.png 2x"
+                  alt="Кофе без кофеина - Декаф Флэт Уайт" class="card-item__image" width="130" height="188">
+              </picture>
               <h3 class="card-item__caption">Декаф Флэт Уайт</h3>
               <p class="card-item__description">
                 Кофе без кофеина из Эфиопии с натуральным фермерским молоком
@@ -490,12 +481,10 @@
             <div class="card-item">
               <!-- img src="./images/catalog/coffee-can-8@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт"
                 class="card-item__image" width="130" height="188" -->
-                <picture>
-                  <img src="./images/catalog/coffee-can-8@1x.png"
-                  srcset="./images/catalog/coffee-can-8@2x.png 2x"
-                  alt="Кофе без кофеина - Декаф Флэт Уайт"
-                  class="card-item__image" width="130" height="188">
-                </picture>
+              <picture>
+                <img src="./images/catalog/coffee-can-8@1x.png" srcset="./images/catalog/coffee-can-8@2x.png 2x"
+                  alt="Кофе без кофеина - Декаф Флэт Уайт" class="card-item__image" width="130" height="188">
+              </picture>
               <h3 class="card-item__caption">Декаф Флэт Уайт</h3>
               <p class="card-item__description">
                 Кофе без кофеина из Эфиопии с натуральным фермерским молоком
@@ -510,12 +499,10 @@
             <div class="card-item">
               <!-- img src="./images/catalog/coffee-can-9@1x.png" alt="Кофе без кофеина - Декаф Флэт Уайт"
                 class="card-item__image" width="130" height="188" -->
-                <picture>
-                  <img src="./images/catalog/coffee-can-9@1x.png"
-                  srcset="./images/catalog/coffee-can-9@2x.png 2x"
-                  alt="Кофе без кофеина - Декаф Флэт Уайт"
-                  class="card-item__image" width="130" height="188">
-                </picture>
+              <picture>
+                <img src="./images/catalog/coffee-can-9@1x.png" srcset="./images/catalog/coffee-can-9@2x.png 2x"
+                  alt="Кофе без кофеина - Декаф Флэт Уайт" class="card-item__image" width="130" height="188">
+              </picture>
               <h3 class="card-item__caption">Декаф Флэт Уайт</h3>
               <p class="card-item__description">
                 Кофе без кофеина из Эфиопии с натуральным фермерским молоком

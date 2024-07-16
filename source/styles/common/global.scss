@@ -14,10 +14,12 @@ img {
 
 
 
-body{
+body {
   margin: 0;
-  padding:0;
- background-color: #F8F8F8;
+  padding: 0;
+  background-color: #F8F8F8;
+  width: 100%;
+ overflow-x: hidden;
 }
 
 .visually-hidden {
@@ -33,15 +35,22 @@ body{
   overflow: hidden;
 }
 
+
+
+
 .badge {
-  font-family: "Montserrat Bold";
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat Bold", "Arial Black";
   font-size: 12px;
   font-weight: 700;
   line-height: 16px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+
   color: #7859CF;
   text-align: center;
-
+  width: 100%;
   margin-top: 50px;
 }
+

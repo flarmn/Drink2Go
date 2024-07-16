@@ -2,7 +2,11 @@
 
 
 /* header - mobile */
-@media (min-width: 100px) and (max-width: 767px) {}
+@media (min-width: 280px) and (max-width: 767px) {
+  .catlog {
+    background-color: #F8F8F8;
+  }
+}
 
 
 /* header - tablet */
@@ -17,6 +21,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    background-color: #F8F8F8;
 
     .catalog__heading {
       display: flex;

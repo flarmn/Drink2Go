@@ -25,7 +25,6 @@ function runSlider() {
       if (evt.target && evt.target.matches("li.js-slider-navigation__item")) {
         let navItemIndex = Array.from(evt.target.parentNode.children).indexOf(evt.target);
         scrollCoords = navItemIndex * frameWidth;
-        console.log( navItemIndex,  scrollCoords);
         sliderStrip.scroll({
           top: 0,
           left: `${scrollCoords}`,
@@ -40,7 +39,6 @@ function runSlider() {
     behavior: "smooth",
   });
 
-  console.log("frmae width = ", frameWidth)
 
   sliderLeftArrow.onclick = function () {
     if (sliderStrip.scrollLeft >= frameWidth) {
@@ -75,15 +73,20 @@ function runMainMenu() {
   if (header.offsetWidth < 768) {
   mobileMenu.classList.add("visually-hidden");
   mobileMenuButton.classList.remove("visually-hidden");
+  mobileMenuButton.classList.remove("header__menu-icon--close");
+  mobileMenuButton.classList.add("header__menu-icon--open");
   }
 
-  console.log(header.offsetWidth);
   if (header.offsetWidth < 768) {
     mobileMenuButton.onclick = function () {
       if (mobileMenu.offsetHeight == 1) {
         mobileMenu.classList.remove("visually-hidden");
+        mobileMenuButton.classList.remove("header__menu-icon--open");
+        mobileMenuButton.classList.add("header__menu-icon--close");
       } else {
         mobileMenu.classList.add("visually-hidden");
+        mobileMenuButton.classList.remove("header__menu-icon--close");
+        mobileMenuButton.classList.add("header__menu-icon--open");
       }
     }
   } else {
@@ -116,8 +119,6 @@ function runSelect() {
 
   dropDownMenu.onclick = function (evt) {
     if (evt.target && evt.target.matches("li.js-dropDown-option")) {
-
-      console.log("clicked " + evt.target.innerText);
       dropDownScreen.value = evt.target.innerText;
       dropDownOptions.forEach((item) => item.classList.remove("dropDown-option__selected"))
       evt.target.classList.add("dropDown-option__selected");

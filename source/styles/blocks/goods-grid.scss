@@ -1,4 +1,5 @@
 
+/* MOBILE */
 @media (min-width: 280px) and (max-width: 767px) {
   .cards-grid {
     display: grid;
@@ -12,7 +13,8 @@
   .card-item {
     display: flex;
     flex-direction: column;
-    width: 349px;
+    align-items: center;
+    width: 95%;
     height: 440px;
     background-color: white;
 
@@ -25,6 +27,10 @@
     -moz-box-shadow: 0px 0px 10px 1px rgba(34, 60, 80, 0.05);
     box-shadow: 0px 0px 10px 1px rgba(34, 60, 80, 0.05);
 
+    picture{
+      display: flex;
+      justify-content: center;
+    }
 
     .card-item__image {
       margin: auto;
@@ -32,7 +38,8 @@
     }
 
     .card-item__caption {
-      font-family: "Montserrat Bold";
+      width: 100%;
+      font-family: "Montserrat Bold", "Arial Black";
       font-size: 18px;
       font-weight: 700;
       line-height: 32px;
@@ -40,10 +47,11 @@
       color: #333333;
       margin: 0;
       padding: 0;
+
     }
 
     .card-item__description {
-      font-family: "Montserrat Regular";
+     font-family: "Montserrat Regular", "Arial";
       font-size: 14px;
       font-weight: 400;
       line-height: 20px;
@@ -60,9 +68,10 @@
     align-items: center;
     padding: 0;
     margin: 0;
+    width: 100%;
 
     .price-and-order__price {
-      font-family: "Montserrat Regular";
+     font-family: "Montserrat Regular", "Arial";
       font-size: 20px;
       font-weight: 600;
       line-height: 32px;
@@ -78,7 +87,7 @@
       background-color: #7859CF;
       color: white;
 
-      font-family: "Montserrat Regular";
+     font-family: "Montserrat Regular", "Arial";
       font-size: 14px;
       font-weight: 400;
       line-height: 20px;
@@ -95,7 +104,7 @@
   }
 }
 
-
+/* TABLET */
 @media (min-width: 768px) and (max-width: 1439px) {
   .cards-grid {
     display: grid;
@@ -121,6 +130,10 @@
     -moz-box-shadow: 0px 0px 10px 1px rgba(34, 60, 80, 0.05);
     box-shadow: 0px 0px 10px 1px rgba(34, 60, 80, 0.05);
 
+    picture{
+      display: flex;
+      justify-content: center;
+    }
 
     .card-item__image {
       margin: auto;
@@ -128,7 +141,7 @@
     }
 
     .card-item__caption {
-      font-family: "Montserrat Bold";
+      font-family: "Montserrat Bold", "Arial Black";
       font-size: 18px;
       font-weight: 700;
       line-height: 32px;
@@ -136,10 +149,11 @@
       color: #333333;
       margin: 0;
       padding: 0;
+      width: 100%;
     }
 
     .card-item__description {
-      font-family: "Montserrat Regular";
+     font-family: "Montserrat Regular", "Arial";
       font-size: 14px;
       font-weight: 400;
       line-height: 20px;
@@ -158,7 +172,7 @@
     margin: 0;
 
     .price-and-order__price {
-      font-family: "Montserrat Regular";
+     font-family: "Montserrat Regular", "Arial";
       font-size: 20px;
       font-weight: 600;
       line-height: 32px;
@@ -174,7 +188,7 @@
       background-color: #7859CF;
       color: white;
 
-      font-family: "Montserrat Regular";
+     font-family: "Montserrat Regular", "Arial";
       font-size: 14px;
       font-weight: 400;
       line-height: 20px;
@@ -191,7 +205,7 @@
   }
 }
 
-
+/* PC  */
 @media (min-width: 1440px) {
 
   .cards-grid {
@@ -220,6 +234,10 @@
     -moz-box-shadow: 0px 0px 10px 1px rgba(34, 60, 80, 0.05);
     box-shadow: 0px 0px 10px 1px rgba(34, 60, 80, 0.05);
 
+    picture{
+      display: flex;
+      justify-content: center;
+    }
 
     .card-item__image {
       margin: auto;
@@ -227,7 +245,7 @@
     }
 
     .card-item__caption {
-      font-family: "Montserrat Bold";
+      font-family: "Montserrat Bold", "Arial Black";
       font-size: 18px;
       font-weight: 700;
       line-height: 32px;
@@ -238,7 +256,7 @@
     }
 
     .card-item__description {
-      font-family: "Montserrat Regular";
+     font-family: "Montserrat Regular", "Arial";
       font-size: 14px;
       font-weight: 400;
       line-height: 20px;
@@ -257,7 +275,7 @@
     margin: 0;
 
     .price-and-order__price {
-      font-family: "Montserrat Regular";
+     font-family: "Montserrat Regular", "Arial";
       font-size: 20px;
       font-weight: 600;
       line-height: 32px;
@@ -273,7 +291,7 @@
       background-color: #7859CF;
       color: white;
 
-      font-family: "Montserrat Regular";
+     font-family: "Montserrat Regular", "Arial";
       font-size: 14px;
       font-weight: 400;
       line-height: 20px;
