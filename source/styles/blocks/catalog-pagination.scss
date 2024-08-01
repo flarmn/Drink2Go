@@ -59,9 +59,10 @@
 
 
   .pagination-panel__item-pevious, .pagination-panel__item-next{
+    background: linear-gradient(90deg, #ccc 0%,  #7859cf 100%);
     background-image: url("/icons/stack.svg#arrow-left");
     background-repeat: no-repeat;
-    background-size: 10px;
+    background-size: 10px 10px;
     background-position: center;
   }
 

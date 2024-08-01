@@ -28,6 +28,7 @@
     width: 20%;
 
     .header__logo-link {
+      background-image: linear-gradient(270deg, #ccc 0%, #7859cf 100%);
       background-image: url("/images/vector/logo/logo-symbol-icon.svg");
       background-repeat: no-repeat;
       width: 32px;
@@ -89,18 +90,20 @@
     .header__login-icon {
       width: 60px;
       height: 60px;
+      background-image: linear-gradient(270deg, #ccc 0%, #7859cf 100%);
       background-image: url("/icons/stack.svg#login-icon");
       background-repeat: no-repeat;
-      background-size: 16px;
+      background-size: 16px 16px;
       background-position: center;
     }
 
     .header__basket-icon {
       width: 60px;
       height: 60px;
+      background-image: linear-gradient(270deg, #ccc 0%, #7859cf 100%);
       background-image: url("/icons/stack.svg#basket-icon");
       background-repeat: no-repeat;
-      background-size: 16px;
+      background-size: 16px 16px;
       background-position: center;
     }
 
@@ -108,9 +111,10 @@
       width: 60px;
       height: 60px;
       background: white;
+      background-image: linear-gradient(270deg, #ccc 0%, #7859cf 100%);
       background-image: url("/icons/stack.svg#menu-icon");
       background-repeat: no-repeat;
-      background-size: 16px;
+      background-size: 16px 16px;
       background-position: center;
       border-style: none;
     }
@@ -119,9 +123,10 @@
       width: 60px;
       height: 60px;
       background: white;
+      background-image: linear-gradient(270deg, #ccc 0%, #7859cf 100%);
       background-image: url("/icons/stack.svg#close-icon");
       background-repeat: no-repeat;
-      background-size: 16px;
+      background-size: 16px 16px;
       background-position: center;
       border-style: none;
     }
@@ -149,6 +154,7 @@
     order: 0;
 
     .header__logo-link {
+      background-image: linear-gradient(270deg, #ccc 0%, #7859cf 100%);
       background-image: url("/images/vector/logo/logo-short-icon.svg");
       background-repeat: no-repeat;
       width: 82px;
@@ -205,18 +211,20 @@
     .header__login-icon {
       width: 60px;
       height: 100%;
+      background-image: linear-gradient(270deg, #ccc 0%, #7859cf 100%);
       background-image: url("/icons/stack.svg#login-icon");
       background-repeat: no-repeat;
-      background-size: 16px;
+      background-size: 16px 16px;
       background-position: center;
     }
 
     .header__basket-icon {
       width: 60px;
       height: 100%;
+      background-image: linear-gradient(270deg, #ccc 0%, #7859cf 100%);
       background-image: url("/icons/stack.svg#basket-icon");
       background-repeat: no-repeat;
-      background-size: 16px;
+      background-size: 16px 16px;
       background-position: center;
     }
   }
@@ -225,9 +233,10 @@
       width: 60px;
       height: 60px;
       background: white;
+      background-image: linear-gradient(270deg, #ccc 0%, #7859cf 100%);
       background-image: url("/icons/stack.svg#menu-icon");
       background-repeat: no-repeat;
-      background-size: 16px;
+      background-size: 16px 16px;
       background-position: center;
       border-style: none;
     }
@@ -253,6 +262,7 @@
     order: 0;
 
     .header__logo-link {
+      background-image: linear-gradient(270deg, #ccc 0%, #7859cf 100%);
       background-image: url("/images/vector/logo/logo-long-icon.svg");
       background-repeat: no-repeat;
       width: 170px;
@@ -317,9 +327,10 @@
       width: 84px;
       height: 100%;
 
+      background-image: linear-gradient(270deg, #ccc 0%, #7859cf 100%);
       background-image: url("/icons/stack.svg#login-icon");
       background-repeat: no-repeat;
-      background-size: 16px;
+      background-size: 16px 16px;
       background-position: left center;
 
 
@@ -333,10 +344,12 @@
     }
 
     .header__login-icon {
+      background-image: linear-gradient(270deg, #ccc 0%, #7859cf 100%);
       background-image: url("/icons/stack.svg#login-icon");
     }
 
     .header__basket-icon {
+      background-image: linear-gradient(270deg, #ccc 0%, #7859cf 100%);
       background-image: url("/icons/stack.svg#basket-icon");
       padding-left: 15px;
     }
@@ -345,9 +358,10 @@
       width: 60px;
       height: 60px;
       background: white;
+      background-image: linear-gradient(270deg, #ccc 0%, #7859cf 100%);
       background-image: url("/icons/stack.svg#menu-icon");
       background-repeat: no-repeat;
-      background-size: 16px;
+      background-size: 16px 16px;
       background-position: center;
       border-style: none;
     }

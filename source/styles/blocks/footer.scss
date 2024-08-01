@@ -3,6 +3,7 @@
   flex-direction: column;
 }
 
+
 .footer__logo-n-social {
   display: flex;
   justify-content: space-between;
@@ -14,6 +15,7 @@
   .footer__logo {
     width: 82px;
     height: 36px;
+    background: linear-gradient(270deg, #ccc 0%, #7859cf 100%);
     background-image: url("/images/vector/logo/logo-short-icon.svg");
   }
 
@@ -39,24 +41,30 @@
   }
 
   .vk-icon {
+    background: linear-gradient(270deg, #ccc 0%, #ccc 100%);
     background-image: url("/images/vector/social/vk-icon.svg");
   }
 
   .pinterest-icon {
+    background: linear-gradient(270deg, #ccc 0%, #ccc 100%);
     background-image: url("/images/vector/social/pinterest-icon.svg");
   }
 
   .ok-icon {
+    background: linear-gradient(270deg, #ccc 0%, #ccc 100%);
     background-image: url("/images/vector/social/ok-icon.svg");
+  }
+
+  .vk-icon,
+  .pinterest-icon,
+  .ok-icon {
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: center;
   }
 }
 
-.footer-menus {
-  /*
-  width: 280px;
-  margin: auto;
-  */
-}
+
 
 .footer__menu-block {
   display: flex;
@@ -76,7 +84,7 @@
   }
 
   .menu-item {
-   font-family: "Montserrat Regular", "Arial";
+    font-family: "Montserrat Regular", "Arial";
     font-size: 12px;
     font-weight: 600;
     line-height: 16px;
@@ -88,9 +96,22 @@
     margin-bottom: 20px;
   }
 
+
+
+
+  .footer__physical-address {
+    background: linear-gradient(270deg, #ccc 20%, #7859cf 100%);
+    background-image: url("/icons/address-icon.svg");
+  }
+
+  .footer__telephone {
+    background: linear-gradient(270deg, #ccc 20%, #7859cf 100%);
+    background-image: url("/icons/phone-icon.svg");
+  }
+
   .footer__physical-address,
   .footer__telephone {
-   font-family: "Montserrat Regular", "Arial";
+    font-family: "Montserrat Regular", "Arial";
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -107,15 +128,6 @@
     background-position: left top;
   }
 
-
-.footer__physical-address{
-  background-image: url("/icons/address-icon.svg");
-}
-
-.footer__telephone{
-  background-image: url("/icons/phone-icon.svg");
-}
-
 }
 
 .footer__copyrigth-info {
@@ -126,13 +138,13 @@
   border-top: solid 1px #F0EBFF;
   color: #BDBDBD;
 
- font-family: "Montserrat Regular", "Arial";
+  font-family: "Montserrat Regular", "Arial";
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
 
 
-  p{
+  p {
     padding-right: 17px;
     background-image: url("/images/vector/logo/logo-academy-default.svg");
     background-repeat: no-repeat;
@@ -141,6 +153,7 @@
   }
 
 }
+
 
 
 /* COMMON FOR ALL RESOLUTIONS in BLOCK*/
@@ -164,7 +177,167 @@
     .footer__logo {
       width: 82px;
       height: 36px;
+      background: linear-gradient(270deg, #ccc 0%, #7859cf 100%);
       background-image: url("/images/vector/logo/logo-short-icon.svg");
+    }
+  }
+
+  .footer__social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 160px;
+    height: 40px;
+
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      background-repeat: no-repeat;
+      background-size: 20px;
+      background-position: center;
+    }
+
+
+
+    .vk-icon {
+      background: linear-gradient(270deg, #ccc 50%, #ccc 100%);
+      background-image: url("/images/vector/social/vk-icon.svg");
+    }
+
+    .pinterest-icon {
+      background: linear-gradient(270deg, #ccc 50%, #ccc 100%);
+      background-image: url("/images/vector/social/pinterest-icon.svg");
+    }
+
+    .ok-icon {
+      background: linear-gradient(270deg, #ccc 50%, #ccc 100%);
+      background-image: url("/images/vector/social/ok-icon.svg");
+    }
+
+    .vk-icon,
+    .pinterest-icon,
+    .ok-icon {
+      background-size: 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+
+  .footer__menu-block {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-top: solid 1px #F0EBFF;
+
+    .footer__menu-heading {
+      font-family: "Montserrat Bold", "Arial Black";
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 20px;
+      letter-spacing: 0.02em;
+      text-align: left;
+      color: #7859CF;
+    }
+
+    .menu-item {
+      font-family: "Montserrat Regular", "Arial";
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 16px;
+      letter-spacing: 0.02em;
+      text-align: left;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #333333;
+      margin-bottom: 20px;
+    }
+
+
+    .footer__physical-address {
+      background: linear-gradient(270deg, #ccc 20%, #7859cf 100%);
+      background-image: url("/icons/address-icon.svg");
+    }
+
+    .footer__telephone {
+      background: linear-gradient(270deg, #ccc 20%, #7859cf 100%);
+      background-image: url("/icons/phone-icon.svg");
+    }
+
+    .footer__physical-address,
+    .footer__telephone {
+      font-family: "Montserrat Regular", "Arial";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      text-align: left;
+      font-style: normal;
+      text-decoration: none;
+      padding-left: 20px;
+      color: #333333;
+      padding-bottom: 16px;
+
+
+      background-repeat: no-repeat;
+      background-size: 13px 16px;
+      background-position: left top;
+    }
+  }
+
+  .footer__copyrigth-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 66px;
+    border-top: solid 1px #F0EBFF;
+    color: #BDBDBD;
+
+    font-family: "Montserrat Regular", "Arial";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+
+
+    p {
+      padding-right: 17px;
+      background: linear-gradient(270deg, #ccc 20%, #7859cf 100%);
+      background-image: url("/images/vector/logo/logo-academy-default.svg");
+      background-repeat: no-repeat;
+      background-size: 13px 16px;
+      background-position: right center;
+    }
+
+  }
+}
+
+
+/* header - tablet */
+@media (min-width: 768px) and (max-width: 1439px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__logo-n-social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+
+
+    .footer__logo {
+      width: 170px;
+      height: 36px;
+      background: linear-gradient(270deg, #ccc 0%, #7859cf 100%);
+      background-image: url("/images/vector/logo/logo-long-icon.svg");
     }
   }
 
@@ -200,156 +373,7 @@
   }
 
   .footer-menus {
-    /*
-    width: 280px;
-    margin: auto;
-    */
-  }
-
-  .footer__menu-block {
     display: flex;
-    flex-direction: column;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-top: solid 1px #F0EBFF;
-
-    .footer__menu-heading {
-      font-family: "Montserrat Bold", "Arial Black";
-      font-size: 14px;
-      font-weight: 700;
-      line-height: 20px;
-      letter-spacing: 0.02em;
-      text-align: left;
-      color: #7859CF;
-    }
-
-    .menu-item {
-     font-family: "Montserrat Regular", "Arial";
-      font-size: 12px;
-      font-weight: 600;
-      line-height: 16px;
-      letter-spacing: 0.02em;
-      text-align: left;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: #333333;
-      margin-bottom: 20px;
-    }
-
-    .footer__physical-address,
-    .footer__telephone {
-     font-family: "Montserrat Regular", "Arial";
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 20px;
-      text-align: left;
-      font-style: normal;
-      text-decoration: none;
-      padding-left: 20px;
-      color: #333333;
-      padding-bottom: 16px;
-
-
-      background-repeat: no-repeat;
-      background-size: 13px 16px;
-      background-position: left top;
-    }
-
-
-  .footer__physical-address{
-    background-image: url("/icons/address-icon.svg");
-  }
-
-  .footer__telephone{
-    background-image: url("/icons/phone-icon.svg");
-  }
-
-  }
-
-  .footer__copyrigth-info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 66px;
-    border-top: solid 1px #F0EBFF;
-    color: #BDBDBD;
-
-   font-family: "Montserrat Regular", "Arial";
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 16px;
-
-
-    p{
-      padding-right: 17px;
-      background-image: url("/images/vector/logo/logo-academy-default.svg");
-      background-repeat: no-repeat;
-      background-size: 13px 16px;
-      background-position: right center;
-    }
-
-  }
-}
-
-
-/* header - tablet */
-@media (min-width: 768px) and (max-width: 1439px) {
-  .footer {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .footer__logo-n-social {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-    width: 100%;
-    margin: auto;
-    padding-left:20px;
-    padding-right:20px;
-
-
-    .footer__logo {
-      width: 170px;
-      height: 36px;
-      background-image: url("/images/vector/logo/logo-long-icon.svg");
-    }
-  }
-
-  .footer__social-icons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    width: 160px;
-    height: 40px;
-
-    a {
-      text-decoration: none;
-      cursor: pointer;
-      width: 40px;
-      height: 40px;
-      background-repeat: no-repeat;
-      background-size: 20px;
-      background-position: center;
-    }
-
-    .vk-icon {
-      background-image: url("/images/vector/social/vk-icon.svg");
-    }
-
-    .pinterest-icon {
-      background-image: url("/images/vector/social/pinterest-icon.svg");
-    }
-
-    .ok-icon {
-      background-image: url("/images/vector/social/ok-icon.svg");
-    }
-  }
-
-  .footer-menus{
-    display:flex;
     align-items: flex-start;
   }
 
@@ -371,7 +395,7 @@
     }
 
     .menu-item {
-     font-family: "Montserrat Regular", "Arial";
+      font-family: "Montserrat Regular", "Arial";
       font-size: 12px;
       font-weight: 600;
       line-height: 16px;
@@ -383,9 +407,18 @@
       margin-bottom: 20px;
     }
 
+
+    .footer__physical-address {
+      background-image: url("/icons/address-icon.svg");
+    }
+
+    .footer__telephone {
+      background-image: url("/icons/phone-icon.svg");
+    }
+
     .footer__physical-address,
     .footer__telephone {
-     font-family: "Montserrat Regular", "Arial";
+      font-family: "Montserrat Regular", "Arial";
       font-size: 14px;
       font-weight: 400;
       line-height: 20px;
@@ -402,15 +435,6 @@
       background-position: left top;
     }
 
-
-  .footer__physical-address{
-    background-image: url("/icons/address-icon.svg");
-  }
-
-  .footer__telephone{
-    background-image: url("/icons/phone-icon.svg");
-  }
-
   }
 
   .footer__copyrigth-info {
@@ -421,13 +445,13 @@
     border-top: solid 1px #F0EBFF;
     color: #BDBDBD;
 
-   font-family: "Montserrat Regular", "Arial";
+    font-family: "Montserrat Regular", "Arial";
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
 
 
-    p{
+    p {
       padding-right: 17px;
       background-image: url("/images/vector/logo/logo-academy-default.svg");
       background-repeat: no-repeat;
@@ -454,13 +478,14 @@
     height: 80px;
     width: 100%;
     margin: auto;
-    padding-left:20px;
-    padding-right:20px;
+    padding-left: 20px;
+    padding-right: 20px;
 
 
     .footer__logo {
       width: 170px;
       height: 36px;
+      background: linear-gradient(270deg, #ccc 0%, #7859cf 100%);
       background-image: url("/images/vector/logo/logo-long-icon.svg");
     }
 
@@ -486,15 +511,18 @@
     }
 
     .vk-icon {
+      background: linear-gradient(270deg, #ccc 0%, #7859cf 100%);
       background-image: url("/images/vector/social/vk-icon.svg");
     }
 
-    .vk-icon:hover{
+    .vk-icon:hover {
+      background: linear-gradient(270deg, #ccc 0%, #7859cf 100%);
       background-image: url("/images/vector/social/vk-icon_hover.svg");
     }
 
 
     .pinterest-icon {
+      background: linear-gradient(270deg, #ccc 0%, #7859cf 100%);
       background-image: url("/images/vector/social/pinterest-icon.svg");
     }
 
@@ -511,8 +539,8 @@
     }
   }
 
-  .footer-menus{
-    display:flex;
+  .footer-menus {
+    display: flex;
     align-items: flex-start;
   }
 
@@ -534,7 +562,7 @@
     }
 
     .menu-item {
-     font-family: "Montserrat Regular", "Arial";
+      font-family: "Montserrat Regular", "Arial";
       font-size: 12px;
       font-weight: 600;
       line-height: 16px;
@@ -546,9 +574,22 @@
       margin-bottom: 20px;
     }
 
+
+
+
+    .footer__physical-address {
+      background: linear-gradient(270deg, #ccc 0%, #7859cf 100%);
+      background-image: url("/icons/address-icon.svg");
+    }
+
+    .footer__telephone {
+      background: linear-gradient(270deg, #ccc 0%, #7859cf 100%);
+      background-image: url("/icons/phone-icon.svg");
+    }
+
     .footer__physical-address,
     .footer__telephone {
-     font-family: "Montserrat Regular", "Arial";
+      font-family: "Montserrat Regular", "Arial";
       font-size: 14px;
       font-weight: 400;
       line-height: 20px;
@@ -564,16 +605,6 @@
       background-size: 13px 16px;
       background-position: left top;
     }
-
-
-  .footer__physical-address{
-    background-image: url("/icons/address-icon.svg");
-  }
-
-  .footer__telephone{
-    background-image: url("/icons/phone-icon.svg");
-  }
-
   }
 
   .footer__copyrigth-info {
@@ -584,14 +615,15 @@
     border-top: solid 1px #F0EBFF;
     color: #BDBDBD;
 
-   font-family: "Montserrat Regular", "Arial";
+    font-family: "Montserrat Regular", "Arial";
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
 
 
-     a{
+    a {
       padding-right: 17px;
+      background: linear-gradient(270deg, #ccc 0%, #7859cf 100%);
       background-image: url("/images/vector/logo/logo-academy-default.svg");
       background-repeat: no-repeat;
       background-size: 13px 16px;
@@ -602,7 +634,7 @@
       margin-left: 3px;
     }
 
-    a:hover{
+    a:hover {
       background-image: url("/images/vector/logo/logo-academy-focus.svg");
       color: #7859CF;
     }
